@@ -61,7 +61,6 @@
 -- 09/18/2006(UlrichZ): created
 ------------------------------------------------------------------------
 
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_ARITH.ALL;
@@ -71,26 +70,18 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 library UNISIM;
 use UNISIM.VComponents.all;
 
--- Uncomment the following library declaration if using
--- arithmetic functions with Signed or Unsigned values
---use IEEE.NUMERIC_STD.ALL;
-
--- Uncomment the following library declaration if instantiating
--- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
-
+-- the vga_controller_640_60 entity declaration
+-- read above for behavioral description and port definitions.
 entity vga_controller is
-    port(
-        rst         : in std_logic;
-        pixel_clk   : in std_logic;
-     
-        HS          : out std_logic;
-        VS          : out std_logic;
-        hcount      : out std_logic_vector(10 downto 0);
-        vcount      : out std_logic_vector(10 downto 0);
-        blank       : out std_logic
-     );
+port(
+   rst         : in std_logic;
+   pixel_clk   : in std_logic;
+   HS          : out std_logic;
+   VS          : out std_logic;
+   hcount      : out std_logic_vector(10 downto 0);
+   vcount      : out std_logic_vector(10 downto 0);
+   blank       : out std_logic
+);
 end vga_controller;
 
 architecture Behavioral of vga_controller is
@@ -129,6 +120,7 @@ signal vcounter : std_logic_vector(10 downto 0) := (others => '0');
 
 -- active when inside visible screen area.
 signal video_enable: std_logic;
+
 begin
 
    -- output horizontal and vertical counters
