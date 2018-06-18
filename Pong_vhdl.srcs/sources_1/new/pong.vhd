@@ -150,7 +150,7 @@ scoreDigit : score port map(
     CLK =>clk);
     
 ps2 : ps2_keyboard port map(
-        clk=> clk    ,     
+        clk=> clk,     
         ps2_clk=> PS2Clk,
         ps2_data => PS2Data,
         ps2_code_new =>ps2_code_new,
