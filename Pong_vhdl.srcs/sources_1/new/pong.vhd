@@ -108,7 +108,7 @@ begin
 	if (rising_edge(vga_clk) and new_frame = '1') then
 		
 		if (p1_up = '1') then  
-			if (paddle_v2 < 430) then
+			if (paddle_v2 < 440) then
 				paddle_v2 <= paddle_v2 + paddle_speed;
 			end if;
 		elsif ( p1_down = '1') then  
@@ -118,7 +118,7 @@ begin
 		end if;
 		
 		if (p2_up = '1') then
-			if (paddle_v1 < 430) then
+			if (paddle_v1 < 440) then
 				paddle_v1 <= paddle_v1 + paddle_speed;
 			end if;
 		elsif (p2_down = '1') then

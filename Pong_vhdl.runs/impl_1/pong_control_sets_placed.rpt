@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Mon Jun 18 14:41:36 2018
+| Date         : Mon Jun 18 15:04:18 2018
 | Host         : LAPTOP-ARTRU running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file pong_control_sets_placed.rpt
 | Design       : pong
@@ -52,32 +52,32 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |               7 |            6 |
 | No           | No                    | Yes                    |               3 |            1 |
-| No           | Yes                   | No                     |              17 |            9 |
+| No           | Yes                   | No                     |              17 |            7 |
 | Yes          | No                    | No                     |              24 |            8 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |              25 |           10 |
+| Yes          | Yes                   | No                     |              25 |            9 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+-------------------------+--------------------------+------------------+----------------+
-|  Clock Signal  |      Enable Signal      |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
-+----------------+-------------------------+--------------------------+------------------+----------------+
-|  clock/eqOp    |                         |                          |                1 |              1 |
-|  clk_out_BUFG  |                         | vga/VS0                  |                1 |              1 |
-|  clk_out_BUFG  |                         | vga/HS0                  |                1 |              1 |
-|  clk_IBUF_BUFG |                         | clock/clk_int[2]_i_2_n_0 |                1 |              3 |
-|  clk_out_BUFG  |                         | vga/set_red0             |                2 |              4 |
-|  clk_out_BUFG  | vga/ball_pos_v10        | vga/ball_pos_v1_reg[1]   |                2 |              4 |
-|  clk_out_BUFG  |                         |                          |                5 |              6 |
-|  clk_out_BUFG  | vga/ball_pos_v10        |                          |                2 |              6 |
-|  clk_out_BUFG  | vga/E[0]                |                          |                3 |              9 |
-|  clk_out_BUFG  | vga/paddle_v2_reg[1][0] |                          |                3 |              9 |
-|  clk_out_BUFG  | vga/new_frame15_out     | vga/SR[0]                |                3 |             10 |
-|  clk_out_BUFG  |                         | vga/hcounter[10]_i_1_n_0 |                5 |             11 |
-|  clk_out_BUFG  | vga/eqOp                | vga/vcounter[10]_i_1_n_0 |                5 |             11 |
-+----------------+-------------------------+--------------------------+------------------+----------------+
++----------------+---------------------------+--------------------------+------------------+----------------+
+|  Clock Signal  |       Enable Signal       |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
++----------------+---------------------------+--------------------------+------------------+----------------+
+|  clock/eqOp    |                           |                          |                1 |              1 |
+|  clk_out_BUFG  |                           | vga/VS0                  |                1 |              1 |
+|  clk_out_BUFG  |                           | vga/HS0                  |                1 |              1 |
+|  clk_IBUF_BUFG |                           | clock/clk_int[2]_i_2_n_0 |                1 |              3 |
+|  clk_out_BUFG  |                           | vga/set_red0             |                2 |              4 |
+|  clk_out_BUFG  | vga/ball_pos_v10          | vga/ball_pos_v1_reg[1]   |                2 |              4 |
+|  clk_out_BUFG  |                           |                          |                5 |              6 |
+|  clk_out_BUFG  | vga/ball_pos_v10          |                          |                2 |              6 |
+|  clk_out_BUFG  | vga/E[0]                  |                          |                3 |              9 |
+|  clk_out_BUFG  | vga/paddle_v1_reg[1][0]   |                          |                3 |              9 |
+|  clk_out_BUFG  | vga/ball_pos_h1_reg[0][0] | vga/SS[0]                |                3 |             10 |
+|  clk_out_BUFG  |                           | vga/hcounter[10]_i_1_n_0 |                3 |             11 |
+|  clk_out_BUFG  | vga/eqOp                  | vga/vcounter[10]_i_1_n_0 |                4 |             11 |
++----------------+---------------------------+--------------------------+------------------+----------------+
 
 
