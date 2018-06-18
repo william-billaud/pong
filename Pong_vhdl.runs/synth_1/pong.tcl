@@ -29,7 +29,6 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo e:/Artru/Documents/Pong_vhdl/Pong_vhdl.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_paddle.vhd
   E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_vga.vhd
   E:/Artru/Téléchargements/vga_controller_640_60.vhd
   E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd

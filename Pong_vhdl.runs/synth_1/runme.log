@@ -14,33 +14,28 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 9340 
+INFO: Helper process launched with PID 16488 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 359.340 ; gain = 100.098
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 359.328 ; gain = 100.848
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'pong' [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:22]
-INFO: [Synth 8-3491] module 'clock_vga' declared at 'E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_vga.vhd:37' bound to instance 'clock' of component 'clock_vga' [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:72]
+INFO: [Synth 8-3491] module 'clock_vga' declared at 'E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_vga.vhd:37' bound to instance 'clock' of component 'clock_vga' [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:65]
 INFO: [Synth 8-638] synthesizing module 'clock_vga' [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_vga.vhd:43]
 WARNING: [Synth 8-614] signal 'clk_int' is read in the process but is not in the sensitivity list [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_vga.vhd:48]
 WARNING: [Synth 8-614] signal 'etat' is read in the process but is not in the sensitivity list [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_vga.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'clock_vga' (1#1) [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_vga.vhd:43]
-INFO: [Synth 8-3491] module 'clock_paddle' declared at 'E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_paddle.vhd:37' bound to instance 'clock_pad' of component 'clock_paddle' [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:78]
-INFO: [Synth 8-638] synthesizing module 'clock_paddle' [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_paddle.vhd:43]
-WARNING: [Synth 8-614] signal 'clk_int' is read in the process but is not in the sensitivity list [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_paddle.vhd:48]
-WARNING: [Synth 8-614] signal 'etat' is read in the process but is not in the sensitivity list [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_paddle.vhd:48]
-WARNING: [Synth 8-6014] Unused sequential element clk_int_reg was removed.  [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_paddle.vhd:51]
-INFO: [Synth 8-256] done synthesizing module 'clock_paddle' (2#1) [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_paddle.vhd:43]
-INFO: [Synth 8-3491] module 'vga_controller_640_60' declared at 'E:/Artru/Téléchargements/vga_controller_640_60.vhd:75' bound to instance 'vga' of component 'vga_controller_640_60' [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:83]
+INFO: [Synth 8-3491] module 'vga_controller_640_60' declared at 'E:/Artru/Téléchargements/vga_controller_640_60.vhd:75' bound to instance 'vga' of component 'vga_controller_640_60' [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:71]
 INFO: [Synth 8-638] synthesizing module 'vga_controller_640_60' [E:/Artru/Téléchargements/vga_controller_640_60.vhd:88]
-INFO: [Synth 8-256] done synthesizing module 'vga_controller_640_60' (3#1) [E:/Artru/Téléchargements/vga_controller_640_60.vhd:88]
-WARNING: [Synth 8-614] signal 'new_frame' is read in the process but is not in the sensitivity list [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:117]
-WARNING: [Synth 8-614] signal 'new_frame' is read in the process but is not in the sensitivity list [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:146]
-WARNING: [Synth 8-614] signal 'blank' is read in the process but is not in the sensitivity list [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:205]
-INFO: [Synth 8-256] done synthesizing module 'pong' (4#1) [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:22]
-WARNING: [Synth 8-3331] design clock_paddle has unconnected port clk_in
-WARNING: [Synth 8-3331] design clock_paddle has unconnected port reset
+INFO: [Synth 8-256] done synthesizing module 'vga_controller_640_60' (2#1) [E:/Artru/Téléchargements/vga_controller_640_60.vhd:88]
+WARNING: [Synth 8-614] signal 'new_frame' is read in the process but is not in the sensitivity list [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:105]
+WARNING: [Synth 8-614] signal 'new_frame' is read in the process but is not in the sensitivity list [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:134]
+INFO: [Synth 8-256] done synthesizing module 'pong' (3#1) [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:22]
+WARNING: [Synth 8-3917] design pong has port vgaGreen[3] driven by constant 0
+WARNING: [Synth 8-3917] design pong has port vgaGreen[2] driven by constant 0
+WARNING: [Synth 8-3917] design pong has port vgaGreen[1] driven by constant 0
+WARNING: [Synth 8-3917] design pong has port vgaGreen[0] driven by constant 0
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 414.387 ; gain = 155.145
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 413.488 ; gain = 155.008
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -53,10 +48,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 414.387 ; gain = 155.145
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 413.488 ; gain = 155.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 414.387 ; gain = 155.145
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 413.488 ; gain = 155.008
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -75,28 +70,26 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 746.996 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 746.168 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 746.996 ; gain = 487.754
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 746.168 ; gain = 487.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 746.996 ; gain = 487.754
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 746.168 ; gain = 487.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 746.996 ; gain = 487.754
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 746.168 ; gain = 487.688
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-327] inferring latch for variable 'etat_reg' [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_vga.vhd:57]
-WARNING: [Synth 8-327] inferring latch for variable 'etat_reg' [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_paddle.vhd:57]
-WARNING: [Synth 8-327] inferring latch for variable 'set_green_reg' [E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd:208]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 746.996 ; gain = 487.754
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 746.168 ; gain = 487.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -123,11 +116,9 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 6     
 +---Muxes : 
 	   2 Input     10 Bit        Muxes := 2     
-	   6 Input     10 Bit        Muxes := 1     
 	   5 Input     10 Bit        Muxes := 1     
-	   5 Input      6 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 11    
 	   5 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -149,11 +140,9 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     10 Bit        Muxes := 2     
-	   6 Input     10 Bit        Muxes := 1     
 	   5 Input     10 Bit        Muxes := 1     
-	   5 Input      6 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 9     
 	   5 Input      1 Bit        Muxes := 1     
 Module clock_vga 
 Detailed RTL Component Info : 
@@ -186,17 +175,18 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-6014] Unused sequential element vga/blank_reg was removed.  [E:/Artru/Téléchargements/vga_controller_640_60.vhd:135]
+WARNING: [Synth 8-3917] design pong has port vgaGreen[3] driven by constant 0
+WARNING: [Synth 8-3917] design pong has port vgaGreen[2] driven by constant 0
+WARNING: [Synth 8-3917] design pong has port vgaGreen[1] driven by constant 0
+WARNING: [Synth 8-3917] design pong has port vgaGreen[0] driven by constant 0
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (paddle_v2_inferred__0/\paddle_v2_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (paddle_v1_inferred__0/\paddle_v1_reg[0] )
-INFO: [Synth 8-3886] merging instance 'set_green_reg[0]' (LD) to 'set_green_reg[1]'
-INFO: [Synth 8-3886] merging instance 'set_green_reg[1]' (LD) to 'set_green_reg[2]'
-INFO: [Synth 8-3886] merging instance 'set_green_reg[2]' (LD) to 'set_green_reg[3]'
 INFO: [Synth 8-3886] merging instance 'set_red_reg[0]' (FDS) to 'set_red_reg[1]'
 INFO: [Synth 8-3886] merging instance 'set_red_reg[1]' (FDS) to 'set_red_reg[2]'
 INFO: [Synth 8-3886] merging instance 'set_red_reg[2]' (FDS) to 'set_red_reg[3]'
-WARNING: [Synth 8-3332] Sequential element (clock_pad/etat_reg) is unused and will be removed from module pong.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 746.996 ; gain = 487.754
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 746.168 ; gain = 487.688
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -208,13 +198,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:40 . Memory (MB): peak = 746.996 ; gain = 487.754
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:36 . Memory (MB): peak = 746.168 ; gain = 487.688
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:41 . Memory (MB): peak = 768.191 ; gain = 508.949
+Finished Timing Optimization : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 763.488 ; gain = 505.008
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -226,7 +216,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:42 . Memory (MB): peak = 775.641 ; gain = 516.398
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 771.262 ; gain = 512.781
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -250,7 +240,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 775.641 ; gain = 516.398
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 771.262 ; gain = 512.781
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -263,7 +253,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 775.641 ; gain = 516.398
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 771.262 ; gain = 512.781
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -275,25 +265,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 775.641 ; gain = 516.398
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 771.262 ; gain = 512.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 775.641 ; gain = 516.398
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 771.262 ; gain = 512.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 775.641 ; gain = 516.398
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 771.262 ; gain = 512.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 775.641 ; gain = 516.398
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 771.262 ; gain = 512.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -311,16 +301,16 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     2|
 |2     |CARRY4 |    22|
-|3     |LUT1   |    17|
-|4     |LUT2   |    42|
-|5     |LUT3   |    20|
-|6     |LUT4   |    63|
-|7     |LUT5   |    36|
-|8     |LUT6   |    58|
+|3     |LUT1   |    16|
+|4     |LUT2   |    27|
+|5     |LUT3   |    34|
+|6     |LUT4   |    61|
+|7     |LUT5   |    41|
+|8     |LUT6   |    55|
 |9     |FDCE   |     3|
-|10    |FDRE   |    65|
-|11    |FDSE   |     2|
-|12    |LD     |     2|
+|10    |FDRE   |    56|
+|11    |FDSE   |    10|
+|12    |LD     |     1|
 |13    |IBUF   |     6|
 |14    |OBUF   |    14|
 +------+-------+------+
@@ -329,31 +319,30 @@ Report Instance Areas:
 +------+---------+----------------------+------+
 |      |Instance |Module                |Cells |
 +------+---------+----------------------+------+
-|1     |top      |                      |   352|
+|1     |top      |                      |   348|
 |2     |  clock  |clock_vga             |    10|
-|3     |  vga    |vga_controller_640_60 |   197|
+|3     |  vga    |vga_controller_640_60 |   188|
 +------+---------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 775.641 ; gain = 516.398
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 771.262 ; gain = 512.781
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 775.641 ; gain = 183.789
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:43 . Memory (MB): peak = 775.641 ; gain = 516.398
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 771.262 ; gain = 180.102
+Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 771.262 ; gain = 512.781
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 30 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 29 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 1 load pin(s).
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 2 instances were transformed.
+  A total of 1 instances were transformed.
   LD => LDCE: 1 instances
-  LD => LDCE (inverted pins: G): 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-31 Infos, 15 Warnings, 1 Critical Warnings and 0 Errors encountered.
+25 Infos, 15 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 775.641 ; gain = 529.406
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 771.262 ; gain = 525.465
 INFO: [Common 17-1381] The checkpoint 'E:/Artru/Documents/Pong_vhdl/Pong_vhdl.runs/synth_1/pong.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file pong_utilization_synth.rpt -pb pong_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 775.641 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Mon Jun 18 09:15:00 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 771.262 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 18 12:04:52 2018...
