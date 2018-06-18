@@ -39,6 +39,12 @@ port ( clk_in : in STD_LOGIC;
        clk_out : out STD_LOGIC);
 end component;
 
+component frame_c is
+	Port ( hpos : in std_logic_vector(10 downto 0);
+	vpos : in std_logic_vector(10 downto 0);
+	new_frame : out STD_LOGIC);
+end component;
+
 signal vga_clk : std_logic:='0'; 
 signal rst : std_logic:='0'; 
 signal set_red, set_green, set_blue : std_logic_vector(3 downto 0):= (others => '0');
@@ -76,7 +82,7 @@ vga : vga_controller_640_60 port map (
   hcount=>hpos, 
   vcount=>vpos,
   blank=> blank);
-
+frame : frame_c port map(hpos=>hpos,vpos=>vpos,new_frame=>new_frame);
 draw_paddle : process (vga_clk) 
 begin
 	if (rising_edge(vga_clk)) then
@@ -185,26 +191,6 @@ begin
 	end if;
 		 
 end process;
-
-frame : process (hpos, vpos)
-begin
-    if(hpos = 0 and vpos = 0) then
-        new_frame <= '1';
-     else
-        new_frame <= '0';
-     end if;
-end process;
-
---fond : process (vga_clk)
---begin 
---    if (rising_edge(vga_clk)) then
---		if ( (hpos >= 0 and hpos < 640) and (vpos >= 0 and vpos < 480) ) then
---			set_green <= "1111";
---		else
---			set_green <= "0000";
---		end if;
---	end if;
---end process;
 
   vgaBlue <= set_blue;
   vgaRed <= set_red ;
