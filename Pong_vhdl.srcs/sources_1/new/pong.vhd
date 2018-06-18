@@ -8,8 +8,6 @@ use IEEE.NUMERIC_STD.ALL;
 entity pong is
     Port ( clk : in STD_LOGIC;
            reset : in STD_LOGIC;
-           p1_up : in STD_LOGIC;
-           p1_down : in STD_LOGIC;
            p2_up : in STD_LOGIC;
            p2_down : in STD_LOGIC;
            vgaBlue : out STD_LOGIC_VECTOR (3 downto 0);
@@ -18,7 +16,10 @@ entity pong is
            Hsync : out STD_LOGIC;
            Vsync : out STD_LOGIC;
            digit_OUT : out STD_LOGIC_VECTOR (6 downto 0);
-           digit_choice : out STD_LOGIC_VECTOR (3 downto 0));
+           digit_choice : out STD_LOGIC_VECTOR (3 downto 0);
+           PS2Clk : in STD_LOGIC;
+           PS2Data : in STD_LOGIC
+           );
 end pong;
 
 architecture Behavioral of pong is
@@ -70,6 +71,24 @@ component RGB_controller is
            balle_v : in integer range 0 to 800);
 end component;
 
+component ps2_keyboard IS
+    PORT(
+    clk          : IN  STD_LOGIC;                     --system clock
+    ps2_clk      : IN  STD_LOGIC;                     --clock signal from PS/2 keyboard
+    ps2_data     : IN  STD_LOGIC;                     --data signal from PS/2 keyboard
+    ps2_code_new : OUT STD_LOGIC;                     --flag that new PS/2 code is available on ps2_code bus
+    ps2_code     : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)); --code received from PS/2
+end component;
+
+component boutton is
+    Port ( ps2_code_new : in STD_LOGIC;
+           ps2_code : in STD_LOGIC_VECTOR (7 downto 0);
+           code_on : in STD_LOGIC_VECTOR (7 downto 0);
+           signal_button : out STD_LOGIC);
+end component;           
+           
+           
+
 signal vga_clk : std_logic:='0'; 
 signal rst : std_logic:='0'; 
 signal hpos : std_logic_vector(10 downto 0):= (others => '0');
@@ -92,7 +111,10 @@ signal ball_speed_v	: integer range 0 to 15:= 2;
 
 signal scoreJ1	: integer range 0 to 99:= 0;
 signal scoreJ2	: integer range 0 to 99:= 0;
-
+signal ps2_code : STD_LOGIC_VECTOR(7 DOWNTO 0);
+signal ps2_code_new : std_logic;
+signal p1_up :  STD_LOGIC := '0';
+signal p1_down : STD_LOGIC :='0';
 begin
 
 clock : clock_vga port map(
@@ -126,6 +148,23 @@ scoreDigit : score port map(
     digit_OUT => digit_OUT,
     digit_choice => digit_choice,
     CLK =>clk);
+    
+ps2 : ps2_keyboard port map(
+        clk=> clk    ,     
+        ps2_clk=> PS2Clk,
+        ps2_data => PS2Data,
+        ps2_code_new =>ps2_code_new,
+        ps2_code =>ps2_code);
+
+b_up_1 : boutton port map ( ps2_code_new =>ps2_code_new,
+           ps2_code => ps2_code,
+           code_on => x"15",
+           signal_button => p1_up);
+
+b_down_1 : boutton port map ( ps2_code_new =>ps2_code_new,
+           ps2_code => ps2_code,
+           code_on => x"23",
+           signal_button => p1_down) ;
     
 move_paddle : process (vga_clk) 
 begin
