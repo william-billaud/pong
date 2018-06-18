@@ -77,7 +77,7 @@ signal vpos : std_logic_vector(10 downto 0):= (others => '0');
 signal blank : std_logic:='0';
 signal new_frame : std_logic:='0';
 
-signal paddle_h1 : integer range 0 to 800:= 590;
+signal paddle_h1 : integer range 0 to 800:= 600;
 signal paddle_v1 : integer range 0 to 800:= 220;
 signal paddle_h2 : integer range 0 to 800:= 30;
 signal paddle_v2 : integer range 0 to 800:= 220;
@@ -200,9 +200,6 @@ begin
 		end if;
 	end if;
 	if (rising_edge(vga_clk) and new_frame = '1') then
-        --if (set_blue = "1111" and set_red = "1111") then
-        --   ball_right <= ball_right XOR '1'; 
-        --end if;
         if(ball_pos_h1 <= (paddle_h1 + 5) and (ball_pos_h1+3) > paddle_h1 and ball_pos_v1 >= paddle_v1 and ball_pos_v1 < (paddle_v1+40) )  then
             ball_right <= '0'; 
         end if;

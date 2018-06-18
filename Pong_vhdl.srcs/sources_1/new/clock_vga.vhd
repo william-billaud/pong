@@ -40,6 +40,7 @@ entity clock_vga is
           clk_out : out STD_LOGIC);
 end clock_vga;
 
+
 architecture Behavioral of clock_vga is
 signal clk_int : STD_LOGIC_VECTOR (2 downto 0) := (others =>'0');
 signal etat : STD_Logic := '0';
@@ -51,19 +52,9 @@ begin
             clk_int <= (others =>'0');
         elsif(clk_in'event and clk_in = '1') then 
             clk_int <= clk_int + 1;            
-        end if;
-    
-        if(clk_int = "100") then
-            if(etat ='0') then                
-                etat <= '1';
-            else                
-                etat <='0';
-            end if; 
-            clk_int <= (others =>'0');
-         end if;
-         
+        end if;           
     end process;
    
-    clk_out <= etat;
+    clk_out <= clk_int(1);
 
 end Behavioral;
