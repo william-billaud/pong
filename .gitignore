@@ -3,6 +3,7 @@
 /Pong.cache/*
 pong.sim/sim_1/behav/*
 /Pong_vhdl.runs/*
-/Pong_vhdl.cache/*
+Pong_vhdl.cache/*
 Pong_vhdl.sim/sim_1/behav/*
 vivado.jou
+*.jou
