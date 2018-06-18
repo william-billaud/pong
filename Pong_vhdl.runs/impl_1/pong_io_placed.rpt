@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date                      : Mon Jun 18 15:04:17 2018
-| Host                      : LAPTOP-ARTRU running 64-bit major release  (build 9200)
+| Date                      : Mon Jun 18 15:56:13 2018
+| Host                      : william-bill running 64-bit major release  (build 9200)
 | Command                   : report_io -file pong_io_placed.rpt
 | Design                    : pong
 | Device                    : xc7a35t

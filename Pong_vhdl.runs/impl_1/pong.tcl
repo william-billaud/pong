@@ -65,16 +65,15 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir E:/Artru/Documents/Pong_vhdl/Pong_vhdl.cache/wt [current_project]
-  set_property parent.project_path E:/Artru/Documents/Pong_vhdl/Pong_vhdl.xpr [current_project]
-  set_property ip_output_repo E:/Artru/Documents/Pong_vhdl/Pong_vhdl.cache/ip [current_project]
+  set_property webtalk.parent_dir E:/Documents/Isen/CIR3/VHDL/pong/Pong_vhdl.cache/wt [current_project]
+  set_property parent.project_path E:/Documents/Isen/CIR3/VHDL/pong/Pong_vhdl.xpr [current_project]
+  set_property ip_output_repo E:/Documents/Isen/CIR3/VHDL/pong/Pong_vhdl.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet E:/Artru/Documents/Pong_vhdl/Pong_vhdl.runs/synth_1/pong.dcp
-  read_xdc E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/constrs_1/new/constraint.xdc
+  add_files -quiet E:/Documents/Isen/CIR3/VHDL/pong/Pong_vhdl.runs/synth_1/pong.dcp
+  read_xdc E:/Documents/Isen/CIR3/VHDL/pong/Pong_vhdl.srcs/constrs_1/new/constraint.xdc
   link_design -top pong -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

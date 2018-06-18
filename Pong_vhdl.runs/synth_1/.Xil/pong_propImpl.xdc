@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/constrs_1/new/constraint.xdc rfile:../../../Pong_vhdl.srcs/constrs_1/new/constraint.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:E:/Documents/Isen/CIR3/VHDL/pong/Pong_vhdl.srcs/constrs_1/new/constraint.xdc rfile:../../../Pong_vhdl.srcs/constrs_1/new/constraint.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN W5 [get_ports clk]
 set_property src_info {type:XDC file:1 line:11 export:INPUT save:INPUT read:READ} [current_design]
