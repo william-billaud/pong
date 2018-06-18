@@ -172,9 +172,15 @@ begin
 			end if;
 		end if;
 	end if;
-	if (rising_edge(vga_clk)) then
-        if (set_blue = "1111" and set_red = "1111") then
-            ball_right <= ball_right XOR '1'; 
+	if (rising_edge(vga_clk) and new_frame = '1') then
+        --if (set_blue = "1111" and set_red = "1111") then
+        --   ball_right <= ball_right XOR '1'; 
+        --end if;
+        if(ball_pos_h1 <= (paddle_h1 + 5) and (ball_pos_h1+3) > paddle_h1 and ball_pos_v1 >= paddle_v1 and ball_pos_v1 < (paddle_v1+40) )  then
+            ball_right <= '0'; 
+        end if;
+        if((ball_pos_h1 +3) >= paddle_h2 and ball_pos_h1 < (paddle_h2+5) and ball_pos_v1 >= (paddle_v2) and ball_pos_v1 < (paddle_v2+40)) then
+            ball_right <= '1';
         end if;			
 	end if;
 		 

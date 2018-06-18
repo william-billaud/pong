@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1529316243">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1529325600">
   <File Type="PWROPT-DCP" Name="pong_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="pong_power_routed.rpt"/>
   <File Type="PA-TCL" Name="pong.tcl"/>
@@ -79,13 +79,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pong.vhd">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/clock_paddle.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
