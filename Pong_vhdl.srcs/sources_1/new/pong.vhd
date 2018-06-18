@@ -72,7 +72,6 @@ end component;
 
 signal vga_clk : std_logic:='0'; 
 signal rst : std_logic:='0'; 
-signal set_red, set_green, set_blue : std_logic_vector(3 downto 0):= (others => '0');
 signal hpos : std_logic_vector(10 downto 0):= (others => '0');
 signal vpos : std_logic_vector(10 downto 0):= (others => '0');
 signal blank : std_logic:='0';
