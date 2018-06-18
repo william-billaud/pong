@@ -61,6 +61,6 @@ begin
 
     bleu <= "1111" when (hpos >= balle_h and hpos < balle_h + 8) and (vpos >= balle_v and vpos < balle_v + 8)
                 else "0000";
-    vert <= "1111" when blank='0' else "0000";           
+    vert <= "0000";           
 
 end Behavioral;

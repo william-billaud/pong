@@ -45,6 +45,21 @@ component frame_c is
 	new_frame : out STD_LOGIC);
 end component;
 
+component RGB_controller is
+    Port ( hpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
+           vpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
+           blank : in STD_LOGIC:= '0';
+           rouge : out STD_LOGIC_VECTOR (3 downto 0);
+           vert : out STD_LOGIC_VECTOR (3 downto 0);
+           bleu : out STD_LOGIC_VECTOR (3 downto 0);
+           paddle_h1 : in integer range 0 to 800 ;
+           paddle_v1 : in integer range 0 to 800;
+           paddle_h2 : in integer range 0 to 800;
+           paddle_v2 : in integer range 0 to 800;
+           balle_h : in integer range 0 to 800;
+           balle_v : in integer range 0 to 800);
+end component;
+
 signal vga_clk : std_logic:='0'; 
 signal rst : std_logic:='0'; 
 signal set_red, set_green, set_blue : std_logic_vector(3 downto 0):= (others => '0');
@@ -83,30 +98,15 @@ vga : vga_controller_640_60 port map (
   vcount=>vpos,
   blank=> blank);
 frame : frame_c port map(hpos=>hpos,vpos=>vpos,new_frame=>new_frame);
-draw_paddle : process (vga_clk) 
-begin
-	if (rising_edge(vga_clk)) then
-		if ((hpos >= paddle_h1 and hpos < paddle_h1 + 5) and (vpos >= paddle_v1 and vpos < paddle_v1 + 40) ) then
-			set_red <= "1111";
-		elsif ( (hpos >= paddle_h2 and hpos < paddle_h2 + 5) and (vpos >= paddle_v2 and vpos < paddle_v2 + 40) ) then
-			set_red <= "1111";		
-        else
-            set_red <= "0000";
-        end if;
-     end if;
-   
-end process;
-
-draw_ball : process (vga_clk) 
-begin
-	if (rising_edge(vga_clk)) then
-		if ( (hpos >= ball_pos_h1 and hpos < ball_pos_h1 + 5) and (vpos >= ball_pos_v1 and vpos < ball_pos_v1 + 5) ) then
-			set_blue <= "1111";
-		else
-			set_blue <= "0000";
-		end if;
-end if;	 
-end process;
+rgb : RGB_controller port map(
+	hpos=>hpos,
+	vpos=>vpos,
+	blank =>blank,rouge=>vgaRed,
+	vert=>vgaGreen,bleu=>vgaBlue,
+	paddle_h1=>paddle_h1,
+	paddle_v1=>paddle_v1,
+	paddle_h2=>paddle_h2,paddle_v2=>paddle_v2,
+	balle_h=>ball_pos_h1,balle_v=>ball_pos_v1);
 
 move_paddle : process (vga_clk) 
 begin
@@ -191,9 +191,5 @@ begin
 	end if;
 		 
 end process;
-
-  vgaBlue <= set_blue;
-  vgaRed <= set_red ;
-  vgaGreen <= set_green ;
 
 end Behavioral;
