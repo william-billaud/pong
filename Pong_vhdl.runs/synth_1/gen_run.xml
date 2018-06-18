@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1529326961">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1529331771">
   <File Type="PA-TCL" Name="pong.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="pong_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="pong_reports.tcl"/>
@@ -11,14 +11,48 @@
   <File Type="VDS-TIMING-PB" Name="pong_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/CLK_DIGIT.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/breakNumber.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/clock_vga.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../Téléchargements/vga_controller_640_60.vhd">
+    <File Path="$PSRCDIR/sources_1/imports/new/digit.vhd">
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../compteur/compteur.srcs/sources_1/new/digit.vhd"/>
+        <Attr Name="ImportTime" Val="1529266445"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/driver7Segments.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/score.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Téléchargements/vga_controller_640_60.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../Téléchargements/vga_controller_640_60.vhd"/>
+        <Attr Name="ImportTime" Val="1528810219"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>

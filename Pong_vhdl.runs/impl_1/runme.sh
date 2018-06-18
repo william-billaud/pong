@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/Artru/Documents/Pong_vhdl/Pong_vhdl.runs/impl_1'
+HD_PWD='E:/Artru/Bureau/pong/Pong_vhdl.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

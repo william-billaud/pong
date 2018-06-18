@@ -16,10 +16,20 @@ entity pong is
            vgaRed : out STD_LOGIC_VECTOR (3 downto 0);
            vgaGreen : out STD_LOGIC_VECTOR (3 downto 0);
            Hsync : out STD_LOGIC;
-           Vsync : out STD_LOGIC);
+           Vsync : out STD_LOGIC;
+           digit_OUT : out STD_LOGIC_VECTOR (6 downto 0);
+           digit_choice : out STD_LOGIC_VECTOR (3 downto 0));
 end pong;
 
 architecture Behavioral of pong is
+
+component score is
+port ( scoreJ1 : in integer range 0 to 99;
+       scoreJ2 : in integer range 0 to 99;
+       digit_OUT : out STD_LOGIC_VECTOR (6 downto 0);
+       digit_choice : out STD_LOGIC_VECTOR (3 downto 0);
+       CLK : in STD_LOGIC);
+end component;
 
 component vga_controller_640_60 is
 port(
@@ -47,7 +57,7 @@ signal vpos : std_logic_vector(10 downto 0);
 signal blank : std_logic:='0';
 signal new_frame : std_logic:='0';
 
-signal paddle_h1 : integer range 0 to 800:= 600;
+signal paddle_h1 : integer range 0 to 800:= 590;
 signal paddle_v1 : integer range 0 to 800:= 220;
 signal paddle_h2 : integer range 0 to 800:= 30;
 signal paddle_v2 : integer range 0 to 800:= 220;
@@ -59,6 +69,9 @@ signal ball_up : std_logic:= '0';
 signal ball_right : std_logic:= '1';
 signal ball_speed_h	: integer range 0 to 15:= 2;
 signal ball_speed_v	: integer range 0 to 15:= 2;
+
+signal scoreJ1	: integer range 0 to 99:= 0;
+signal scoreJ2	: integer range 0 to 99:= 0;
 
 begin
 
@@ -77,6 +90,13 @@ vga : vga_controller_640_60 port map (
   vcount=>vpos,
   blank=> blank);
 
+scoreDigit : score port map(
+    scoreJ1 => scoreJ1,
+    scoreJ2 => scoreJ2,
+    digit_OUT => digit_OUT,
+    digit_choice => digit_choice,
+    CLK =>clk);
+    
 draw_paddle : process (vga_clk) 
 begin
 	if (rising_edge(vga_clk)) then
@@ -158,6 +178,7 @@ begin
 				ball_pos_h1 <= ball_pos_h1 + ball_speed_h;
 			--If ball travelling right and at far right
 			elsif (ball_right = '1') then
+			    scoreJ2 <= scoreJ2 + 1; 
 				ball_right	<= '0';
 				ball_pos_v1 <= 238;
                 ball_pos_h1 <= 318;    			
@@ -166,6 +187,7 @@ begin
 				ball_pos_h1 <= ball_pos_h1 - ball_speed_h;
 			--Ball travelling left and at far left
 			elsif (ball_right = '0') then
+			    scoreJ1 <= scoreJ1+1; 
 				ball_right <= '1';
 				ball_pos_v1 <= 238;
                 ball_pos_h1 <= 318;			

@@ -22,16 +22,21 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir E:/Artru/Documents/Pong_vhdl/Pong_vhdl.cache/wt [current_project]
-set_property parent.project_path E:/Artru/Documents/Pong_vhdl/Pong_vhdl.xpr [current_project]
+set_property webtalk.parent_dir E:/Artru/Bureau/pong/Pong_vhdl.cache/wt [current_project]
+set_property parent.project_path E:/Artru/Bureau/pong/Pong_vhdl.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo e:/Artru/Documents/Pong_vhdl/Pong_vhdl.cache/ip [current_project]
+set_property ip_output_repo e:/Artru/Bureau/pong/Pong_vhdl.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib {
-  E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/clock_vga.vhd
-  E:/Artru/Téléchargements/vga_controller_640_60.vhd
-  E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/sources_1/new/pong.vhd
+  E:/Artru/Bureau/pong/Pong_vhdl.srcs/sources_1/new/CLK_DIGIT.vhd
+  E:/Artru/Bureau/pong/Pong_vhdl.srcs/sources_1/new/breakNumber.vhd
+  E:/Artru/Bureau/pong/Pong_vhdl.srcs/sources_1/new/clock_vga.vhd
+  E:/Artru/Bureau/pong/Pong_vhdl.srcs/sources_1/imports/new/digit.vhd
+  E:/Artru/Bureau/pong/Pong_vhdl.srcs/sources_1/new/driver7Segments.vhd
+  E:/Artru/Bureau/pong/Pong_vhdl.srcs/sources_1/new/score.vhd
+  E:/Artru/Bureau/pong/Pong_vhdl.srcs/sources_1/imports/Téléchargements/vga_controller_640_60.vhd
+  E:/Artru/Bureau/pong/Pong_vhdl.srcs/sources_1/new/pong.vhd
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -41,8 +46,8 @@ read_vhdl -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/constrs_1/new/constraint.xdc
-set_property used_in_implementation false [get_files E:/Artru/Documents/Pong_vhdl/Pong_vhdl.srcs/constrs_1/new/constraint.xdc]
+read_xdc E:/Artru/Bureau/pong/Pong_vhdl.srcs/constrs_1/new/constraint.xdc
+set_property used_in_implementation false [get_files E:/Artru/Bureau/pong/Pong_vhdl.srcs/constrs_1/new/constraint.xdc]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
