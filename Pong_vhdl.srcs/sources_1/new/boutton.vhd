@@ -46,16 +46,21 @@ process(ps2_code_new)
 begin
 if(ps2_code_new='1') then
     if(code_on = ps2_code) then 
-        if(unset ='0') then
-            mem<='1';
-        else
-            mem <='0';
-            unset<='0';    
-        end if;    
-    elsif(x"F0"=ps2_code) then
-        unset<='1';
+--        if(unset ='0') then
+--            mem<='1';
+--        else
+--            mem <='0';
+--            unset<='0';    
+--        end if;    
+--    elsif(x"F0"=ps2_code) then
+--        unset<='1';
+--    elsif(x"E0" =ps2_code) then
+--        unset<='0';    
+--    else 
+--        unset <='Z';   
+    mem<='1';
     else
-        unset<='0';    
+    mem<='0';
     end if;    
 end if;
 
