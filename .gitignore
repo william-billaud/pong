@@ -8,3 +8,5 @@ Pong_vhdl.sim/sim_1/behav/*
 vivado.jou
 *.jou
 Pong_vhdl.runs/synth_1/gen_run.xml
+
+pong\.hw/webtalk/
