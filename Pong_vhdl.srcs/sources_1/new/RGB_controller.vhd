@@ -49,7 +49,9 @@ entity RGB_controller is
            balle_h : in integer range 0 to 800;
            balle_v : in integer range 0 to 800;
            scoreJ1 : in integer range 0 to 99;
-           scoreJ2 : in integer range 0 to 99);
+           scoreJ2 : in integer range 0 to 99;
+           sec : in integer range 0 to 59;
+           min : in integer range 0 to 3);
 end RGB_controller;
 
 architecture Behavioral of RGB_controller is
@@ -76,13 +78,15 @@ end component;
 
 signal  r_d1 , g_d1 , b_d1: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_d2 , g_d2 , b_d2: STD_LOGIC_VECTOR (3 downto 0):="0000";
+signal  r_d3 , g_d3 , b_d3: STD_LOGIC_VECTOR (3 downto 0):="0000";
+signal  r_d4 , g_d4 , b_d4: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_b , g_b , b_b: STD_LOGIC_VECTOR (3 downto 0):="0000";
 
 signal  r_pad , g_pad , b_pad: STD_LOGIC_VECTOR (3 downto 0):="0000";
 
 begin
     
-number1 : number_screen port map(
+scoreJoueur2 : number_screen port map(
     nombre => scoreJ2,
     hpos => hpos,
     vpos => vpos,
@@ -92,7 +96,7 @@ number1 : number_screen port map(
     green => g_d1,
     blue => b_d1);
      
-number2 : number_screen port map(
+scoreJoueur1 : number_screen port map(
     nombre => scoreJ1,
     hpos => hpos,
     vpos => vpos,
@@ -100,7 +104,26 @@ number2 : number_screen port map(
     start_v => 15,
     red => r_d2,
     green => g_d2,
-    blue => b_d2);     
+    blue => b_d2);
+    
+minutes : number_screen port map(
+        nombre => min,
+        hpos => hpos,
+        vpos => vpos,
+        start_h => 305,
+        start_v => 460,
+        red => r_d3,
+        green => g_d3,
+        blue => b_d3);
+secondes : number_screen port map(
+                nombre => sec,
+                hpos => hpos,
+                vpos => vpos,
+                start_h => 320,
+                start_v => 460,
+                red => r_d4,
+                green => g_d4,
+                blue => b_d4);                  
         
 balle : draw_balle port map(
             hpos => hpos,
@@ -145,6 +168,6 @@ process(hpos, vpos,blank,paddle_h1,paddle_v1,paddle_v2,paddle_h2)
 
     rouge <=r_pad or r_b;
     bleu <= b_pad or b_b;
-    vert <= g_pad or g_d1 or g_d2 or g_b;         
+    vert <= g_pad or g_d1 or g_d2 or g_d3 or g_d4 or g_b;         
 
 end Behavioral;

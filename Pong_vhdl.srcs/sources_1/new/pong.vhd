@@ -81,7 +81,9 @@ component RGB_controller is
            balle_h : in integer range 0 to 800;
            balle_v : in integer range 0 to 800;
            scoreJ1 : in integer range 0 to 99;
-           scoreJ2 : in integer range 0 to 99
+           scoreJ2 : in integer range 0 to 99;
+           sec : in integer range 0 to 59;
+           min : in integer range 0 to 3
            );
 end component;
 
@@ -211,7 +213,9 @@ rgb : RGB_controller port map(
 	balle_h=>ball_pos_h1,
 	balle_v=>ball_pos_v1,
 	scoreJ1 => scoreJ1,
-    scoreJ2 => scoreJ2);
+    scoreJ2 => scoreJ2,
+    sec=>sec,
+    min=>min);
 
 scoreDigit : score port map(
     scoreJ1 => sec,
