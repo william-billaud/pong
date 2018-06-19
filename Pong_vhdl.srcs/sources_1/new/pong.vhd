@@ -84,14 +84,14 @@ signal paddle_h1 : integer range 0 to 800:= 600;
 signal paddle_v1 : integer range 0 to 800:= 220;
 signal paddle_h2 : integer range 0 to 800:= 30;
 signal paddle_v2 : integer range 0 to 800:= 220;
-signal paddle_speed	: integer range 0 to 15:= 2;
+signal paddle_speed	: integer range 0 to 15:= 3;
 
 signal ball_pos_h1 : integer range 0 to 800:= 318;
 signal ball_pos_v1 : integer range 0 to 800:= 238;
 signal ball_up : std_logic:= '0';
 signal ball_right : std_logic:= '1';
-signal ball_speed_h	: integer range 0 to 15:= 2;
-signal ball_speed_v	: integer range 0 to 15:= 2;
+signal ball_speed_h	: integer range 0 to 15:= 3;
+signal ball_speed_v	: integer range 0 to 15:= 3;
 
 signal scoreJ1	: integer range 0 to 99:= 0;
 signal scoreJ2	: integer range 0 to 99:= 0;
@@ -151,7 +151,7 @@ begin
 				paddle_v2 <= paddle_v2 + paddle_speed;
 			end if;
 		elsif ( p1_down = '1') then  
-			if (paddle_v2 > 0) then
+			if (paddle_v2 > 3) then
 				paddle_v2 <= paddle_v2 - paddle_speed;
 			end if;
 		end if;
@@ -161,7 +161,7 @@ begin
 				paddle_v1 <= paddle_v1 + paddle_speed;
 			end if;
 		elsif (p2_down = '1') then
-			if (paddle_v1 > 0) then
+			if (paddle_v1 > 3) then
 				paddle_v1 <= paddle_v1 - paddle_speed;
 			end if;
 		end if;
