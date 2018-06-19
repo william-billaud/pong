@@ -68,7 +68,10 @@ component RGB_controller is
            paddle_h2 : in integer range 0 to 800;
            paddle_v2 : in integer range 0 to 800;
            balle_h : in integer range 0 to 800;
-           balle_v : in integer range 0 to 800);
+           balle_v : in integer range 0 to 800;
+           scoreJ1 : in integer range 0 to 99;
+           scoreJ2 : in integer range 0 to 99
+           );
 end component;
 
 component ps2_keyboard IS
@@ -96,7 +99,7 @@ signal vpos : std_logic_vector(10 downto 0):= (others => '0');
 signal blank : std_logic:='0';
 signal new_frame : std_logic:='0';
 
-signal paddle_h1 : integer range 0 to 800:= 590;
+signal paddle_h1 : integer range 0 to 800:= 600;
 signal paddle_v1 : integer range 0 to 800:= 220;
 signal paddle_h2 : integer range 0 to 800:= 30;
 signal paddle_v2 : integer range 0 to 800:= 220;
@@ -119,28 +122,36 @@ begin
 
 clock : clock_vga port map(
        clk_in => clk,
-       reset =>reset,
+       reset =>'0',
        clk_out => vga_clk);
 
        
 vga : vga_controller_640_60 port map (
-  rst => reset,
+  rst => '0',
   pixel_clk => vga_clk,
   HS => Hsync,
   VS => Vsync,
   hcount=>hpos, 
   vcount=>vpos,
   blank=> blank);
+  
 frame : frame_c port map(hpos=>hpos,vpos=>vpos,new_frame=>new_frame);
+
 rgb : RGB_controller port map(
 	hpos=>hpos,
 	vpos=>vpos,
-	blank =>blank,rouge=>vgaRed,
-	vert=>vgaGreen,bleu=>vgaBlue,
+	blank =>blank,
+	rouge=>vgaRed,
+	vert=>vgaGreen,
+	bleu=>vgaBlue,
 	paddle_h1=>paddle_h1,
 	paddle_v1=>paddle_v1,
-	paddle_h2=>paddle_h2,paddle_v2=>paddle_v2,
-	balle_h=>ball_pos_h1,balle_v=>ball_pos_v1);
+	paddle_h2=>paddle_h2,
+	paddle_v2=>paddle_v2,
+	balle_h=>ball_pos_h1,
+	balle_v=>ball_pos_v1,
+	scoreJ1 => scoreJ1,
+    scoreJ2 => scoreJ2);
 
 scoreDigit : score port map(
     scoreJ1 => scoreJ1,
@@ -168,7 +179,10 @@ b_down_1 : boutton port map ( ps2_code_new =>ps2_code_new,
     
 move_paddle : process (vga_clk) 
 begin
- 
+    if (reset = '1') then
+        paddle_v2 <= 220;
+        paddle_v1 <= 220;
+    end if;
 	if (rising_edge(vga_clk) and new_frame = '1') then
 		
 		if (p1_up = '1') then  
@@ -202,34 +216,28 @@ begin
 	   if (reset = '1') then
     	   ball_pos_v1 <= 218;
 		   ball_pos_h1 <= 318;
+		   scoreJ1 <= 0;
+		   scoreJ2<=0;
     	else
-			--If ball travelling up, and not at top
-			if (ball_pos_v1 < 475 and ball_up = '1') then
+			if (ball_pos_v1 < 469 and ball_up = '1') then
 				ball_pos_v1 <= ball_pos_v1 + ball_speed_v;
-			--If ball travelling up and at top
 			elsif (ball_up = '1') then
 				ball_up <= '0';
-			--Ball travelling down and not at bottom
-			elsif (ball_pos_v1 > 0 and ball_up = '0') then
+			elsif (ball_pos_v1 > 3 and ball_up = '0') then
 				ball_pos_v1 <= ball_pos_v1 - ball_speed_v;
-			--Ball travelling down and at bottom
 			elsif (ball_up = '0') then
 				ball_up <= '1';
 			end if;
 			
-			--If ball travelling right, and not far right
-			if (ball_pos_h1 < 630 and ball_right = '1') then
+			if (ball_pos_h1 < 628 and ball_right = '1') then
 				ball_pos_h1 <= ball_pos_h1 + ball_speed_h;
-			--If ball travelling right and at far right
 			elsif (ball_right = '1') then
 			    scoreJ2 <= scoreJ2 + 1; 
 				ball_right	<= '0';
 				ball_pos_v1 <= 238;
                 ball_pos_h1 <= 318;    			
-			--Ball travelling left and not at far left
-			elsif (ball_pos_h1 > 10 and ball_right = '0') then
+			elsif (ball_pos_h1 > 4 and ball_right = '0') then
 				ball_pos_h1 <= ball_pos_h1 - ball_speed_h;
-			--Ball travelling left and at far left
 			elsif (ball_right = '0') then
 			    scoreJ1 <= scoreJ1+1; 
 				ball_right <= '1';
@@ -239,9 +247,6 @@ begin
 		end if;
 	end if;
 	if (rising_edge(vga_clk) and new_frame = '1') then
-        --if (set_blue = "1111" and set_red = "1111") then
-        --   ball_right <= ball_right XOR '1'; 
-        --end if;
         if(ball_pos_h1 <= (paddle_h1 + 5) and (ball_pos_h1+3) > paddle_h1 and ball_pos_v1 >= paddle_v1 and ball_pos_v1 < (paddle_v1+40) )  then
             ball_right <= '0'; 
         end if;
