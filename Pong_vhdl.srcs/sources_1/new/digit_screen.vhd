@@ -188,16 +188,16 @@ begin
           when 5 =>
           -- right
           if(hpos = start_h +4) then
-              -- down
-              if( vpos > start_v +4 and vpos < start_v + 8) then
-                  green <= "1111";
-              end if;
+               -- up
+               if(vpos > start_v +4 and vpos < start_v + 8) then
+                   green <= "1111";
+               end if; 
           end if;
           
           --left
           if(hpos = start_h) then
               -- down
-              if( vpos > start_v +4 and vpos < start_v + 8) then
+              if( vpos > start_v  and vpos < start_v + 4) then
                   green <= "1111";
               end if;
           end if;
