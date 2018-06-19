@@ -1,0 +1,1405 @@
+/*
+
+Xilinx Vivado v2018.1 (64-bit) [Major: 2018, Minor: 1]
+SW Build: 2188600 on Wed Apr  4 18:40:38 MDT 2018
+IP Build: 2185939 on Wed Apr  4 20:55:05 MDT 2018
+
+Process ID: 11352
+License: Customer
+
+Current time: 	Tue Jun 19 13:58:19 CEST 2018
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 118 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/Xillinx/Vivado/2018.1/tps/win64/jre
+Java executable location: 	D:/Xillinx/Vivado/2018.1/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Manyia
+User home directory: C:/Users/xmani
+User working directory: C:/Users/xmani/Desktop/Projet VHDL/pong
+User country: 	FR
+User language: 	fr
+User locale: 	fr_FR
+
+RDI_BASEROOT: D:/Xillinx/Vivado
+HDI_APPROOT: D:/Xillinx/Vivado/2018.1
+RDI_DATADIR: D:/Xillinx/Vivado/2018.1/data
+RDI_BINDIR: D:/Xillinx/Vivado/2018.1/bin
+
+Vivado preferences file location: C:/Users/xmani/AppData/Roaming/Xilinx/Vivado/2018.1/vivado.xml
+Vivado preferences directory: C:/Users/xmani/AppData/Roaming/Xilinx/Vivado/2018.1/
+Vivado layouts directory: C:/Users/xmani/AppData/Roaming/Xilinx/Vivado/2018.1/layouts
+PlanAhead jar file location: 	D:/Xillinx/Vivado/2018.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/xmani/Desktop/Projet VHDL/pong/vivado.log
+Vivado journal file location: 	C:/Users/xmani/Desktop/Projet VHDL/pong/vivado.jou
+Engine tmp dir: 	C:/Users/xmani/Desktop/Projet VHDL/pong/.Xil/Vivado-11352-DESKTOP-8N2MO0D
+
+GUI allocated memory:	209 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 677 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bv (ch):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\xmani\Desktop\Projet VHDL\pong\Pong_vhdl.xpr. Version: Vivado v2018.1 
+// [GUI Memory]: 62 MB (+62478kb) [00:00:05]
+// [Engine Memory]: 549 MB (+424389kb) [00:00:05]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/xmani/Desktop/Projet VHDL/pong/Pong_vhdl.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/xmani/Desktop/Projet VHDL/pong/Pong_vhdl.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'E:/Documents/Isen/CIR3/VHDL/pong' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xillinx/Vivado/2018.1/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 77 MB (+12244kb) [00:00:07]
+// [Engine Memory]: 626 MB (+51703kb) [00:00:07]
+// [GUI Memory]: 98 MB (+18068kb) [00:00:08]
+// [Engine Memory]: 660 MB (+2744kb) [00:00:08]
+// [GUI Memory]: 108 MB (+5725kb) [00:00:09]
+// Project name: Pong_vhdl; location: C:/Users/xmani/Desktop/Projet VHDL/pong; part: xc7a35tcpg236-1
+// HMemoryUtils.trashcanNow. Engine heap size: 681 MB. GUI used memory: 41 MB. Current time: 6/19/18 1:58:20 PM CEST
+dismissDialog("Open Project"); // bv (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (pong.vhd) elapsed time: 0.2s
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), clock : clock_vga(Behavioral) (clock_vga.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+// Elapsed time: 56 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), clock : clock_vga(Behavioral) (clock_vga.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), clock : clock_vga(Behavioral) (clock_vga.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), clock : clock_vga(Behavioral) (clock_vga.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), clock : clock_vga(Behavioral) (clock_vga.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+// Elapsed time: 173 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), vga : vga_controller_640_60(Behavioral) (vga_controller_640_60.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), vga : vga_controller_640_60(Behavioral) (vga_controller_640_60.vhd)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), paddle_j1 : paddle_driver(Behavioral) (paddle_driver.vhd)]", 12, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+// Elapsed time: 106 seconds
+selectCodeEditor("pong.vhd", 315, 367); // cd (w, ch)
+// Elapsed time: 32 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1); // B (D, ch)
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), b_up_1 : boutton(Behavioral) (boutton.vhd)]", 8, false); // B (D, ch)
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, ch)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ch)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ch): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+// Elapsed time: 10 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "chronometre"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 26 seconds
+dismissDialog("Add Sources"); // c (ch)
+// Tcl Message: close [ open {C:/Users/xmani/Desktop/Projet VHDL/pong/Pong_vhdl.srcs/sources_1/new/chronometre.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/xmani/Desktop/Projet VHDL/pong/Pong_vhdl.srcs/sources_1/new/chronometre.vhd}} 
+// I (ch): Define Module: addNotify
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 0, (String) null, 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 0, "in", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "inout", 0, "Direction", 1); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; inout ; false ; 0 ; 0", 0, "inout", 1); // ab (O, I)
+// [Engine Memory]: 693 MB (+420kb) [00:08:43]
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 0, "Direction", 1); // ab (O, I)
+// Elapsed time: 10 seconds
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; out ; false ; 0 ; 0", 0, (String) null, 0); // ab (O, I)
+// Elapsed time: 72 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "in_progress", 0, "Port Name", 0); // ab (O, I)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chronometre(Behavioral) (chronometre.vhd)]", 2, false); // B (D, ch)
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chronometre(Behavioral) (chronometre.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chronometre(Behavioral) (chronometre.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectButton(RDIResourceCommand.RDICommands_DELETE, (String) null); // B (f, ch)
+selectButton(RDIResourceCommand.RDICommands_DELETE, (String) null); // B (f, ch)
+selectButton(RDIResourceCommand.RDICommands_DELETE, (String) null); // B (f, ch)
+selectButton(RDIResourceCommand.RDICommands_DELETE, (String) null); // B (f, ch)
+selectButton(RDIResourceCommand.RDICommands_DELETE, "global_delete"); // B (f, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chronometre(Behavioral) (chronometre.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chronometre(Behavioral) (chronometre.vhd)]", 2, false, false, false, false, true, false); // B (D, ch) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ac (ai, ch)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aF (ch): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aF)
+dismissDialog("Remove Sources"); // aF (ch)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/xmani/Desktop/Projet VHDL/pong/Pong_vhdl.srcs/sources_1/new/chronometre.vhd}}] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{C:/Users/xmani/Desktop/Projet VHDL/pong/Pong_vhdl.srcs/sources_1/new/chronometre.vhd}} 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, ch)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, ch)
+// HMemoryUtils.trashcanNow. Engine heap size: 701 MB. GUI used memory: 50 MB. Current time: 6/19/18 2:08:45 PM CEST
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, ch)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ch)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ch): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+dismissFileChooser();
+// Elapsed time: 77 seconds
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+// Elapsed time: 16 seconds
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "chronometre"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// HOptionPane Warning: ''chronometre.vhd' already exists. Please enter another name. (Create Source File)'
+selectButton("PAResourceAtoD.CreateSrcFileDialog_FILE_WITH_SPECIFIED_NAME_ALREADY_OK", "OK"); // JButton (A, H)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "chronometre"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// HOptionPane Warning: ''chronometre.vhd' already exists. Please enter another name. (Create Source File)'
+selectButton("PAResourceAtoD.CreateSrcFileDialog_FILE_WITH_SPECIFIED_NAME_ALREADY_OK", "OK"); // JButton (A, H)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("CANCEL", "Cancel"); // JButton (j, c)
+// 'h' command handler elapsed time: 118 seconds
+dismissDialog("Add Sources"); // c (ch)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B (D, ch)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 2); // B (D, ch)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 17, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, ch)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, ch)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), paddle_j2 : paddle_driver(Behavioral) (paddle_driver.vhd)]", 13, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (D, ch) - Node
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ch)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ch): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "chronometre"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// HOptionPane Warning: ''chronometre.vhd' already exists. Please enter another name. (Create Source File)'
+selectButton("PAResourceAtoD.CreateSrcFileDialog_FILE_WITH_SPECIFIED_NAME_ALREADY_OK", "OK"); // JButton (A, H)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "chrono"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 18 seconds
+dismissDialog("Add Sources"); // c (ch)
+// Tcl Message: close [ open {C:/Users/xmani/Desktop/Projet VHDL/pong/Pong_vhdl.srcs/sources_1/new/chrono.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/xmani/Desktop/Projet VHDL/pong/Pong_vhdl.srcs/sources_1/new/chrono.vhd}} 
+// I (ch): Define Module: addNotify
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 0, "in", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 0, "Direction", 1); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; out ; false ; 0 ; 0", 0, (String) null, 0); // ab (O, I)
+// Elapsed time: 10 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "sec", 0, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 1, "in", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 1, "Direction", 1); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; out ; false ; 0 ; 0", 1, (String) null, 0); // ab (O, I)
+// Elapsed time: 17 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "dsec", 1, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 2, "in", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 2, "Direction", 1); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; out ; false ; 0 ; 0", 2, (String) null, 0); // ab (O, I)
+applyEnter(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, (String) null); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "min", 2, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 3, "in", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 3, "Direction", 1); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; out ; false ; 0 ; 0", 3, (String) null, 0); // ab (O, I)
+applyEnter(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, (String) null); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "dmin", 3, "Port Name", 0); // ab (O, I)
+selectButton(RDIResource.AbstractCombinedPanel_ADD_ELEMENT, "Add Definition"); // B (f, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 4, (String) null, 0); // ab (O, I)
+applyEnter(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, (String) null); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "clock100hz", 4, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 6, "0", 3); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 5, "in", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "in", 5, "Direction", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "in", 4, "Direction", 1); // ab (O, I)
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // B (f, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "in", 5, "Direction", 1); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 5, (String) null, 0); // ab (O, I)
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // B (f, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1); // B (D, ch)
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), clock : clock_vga(Behavioral) (clock_vga.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("pong.vhd", 212, 109); // cd (w, ch)
+typeControlKey((HResource) null, "pong.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "pong.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "pong.vhd", 'c'); // cd (w, ch)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 199, 171); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 353, 186, false, true, false, false, false); // cd (w, ch) - Control Key
+selectCodeEditor("chrono.vhd", 353, 189); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 41 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraint.xdc]", 5, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraint.xdc]", 5, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, constraint.xdc]", 5, false, false, false, false, false, true); // B (D, ch) - Double Click
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, pong(Behavioral) (pong.vhd)]", 8, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, pong(Behavioral) (pong.vhd), b_down_1 : boutton(Behavioral) (boutton.vhd)]", 16, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, chrono(Behavioral) (chrono.vhd)]", 21, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, chrono(Behavioral) (chrono.vhd)]", 21, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 111, 339); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 111, 339, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 199, 352); // cd (w, ch)
+// [GUI Memory]: 114 MB (+321kb) [00:17:19]
+// Elapsed time: 143 seconds
+selectCodeEditor("chrono.vhd", 231, 394); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 294, 372); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 256, 382); // cd (w, ch)
+// Elapsed time: 27 seconds
+selectCodeEditor("chrono.vhd", 39, 449); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 254, 339); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 56, 234); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 56, 234, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 101, 234); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 101, 234, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 43, 302); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 66, 262); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 66, 262, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 149, 259); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 149, 259, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 306, 362); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 86, 317); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 86, 317, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 76, 162); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 76, 162, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 114, 336); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 114, 336, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 114, 361); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 114, 361, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 114, 361); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 114, 361); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 114, 361, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 114, 366); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 114, 366, false, false, false, false, true); // cd (w, ch) - Double Click
+// [GUI Memory]: 124 MB (+4178kb) [00:20:17]
+// Elapsed time: 42 seconds
+selectCodeEditor("chrono.vhd", 193, 417); // cd (w, ch)
+// Elapsed time: 22 seconds
+selectCodeEditor("chrono.vhd", 186, 312); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 186, 312, false, false, false, false, true); // cd (w, ch) - Double Click
+// Elapsed time: 11 seconds
+selectCodeEditor("chrono.vhd", 278, 384); // cd (w, ch)
+// Elapsed time: 14 seconds
+selectCodeEditor("chrono.vhd", 156, 319); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 156, 319, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+// Elapsed time: 29 seconds
+selectCodeEditor("chrono.vhd", 201, 416); // cd (w, ch)
+// Elapsed time: 21 seconds
+selectCodeEditor("chrono.vhd", 229, 416); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 133, 371); // cd (w, ch)
+// Elapsed time: 21 seconds
+selectCodeEditor("chrono.vhd", 156, 416); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 261, 414); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 81, 418); // cd (w, ch)
+// Elapsed time: 10 seconds
+selectCodeEditor("chrono.vhd", 233, 421); // cd (w, ch)
+// Elapsed time: 25 seconds
+selectCodeEditor("chrono.vhd", 241, 176); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, pong(Behavioral) (pong.vhd)]", 8, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, pong(Behavioral) (pong.vhd)]", 8, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 273, 116); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 234, 154); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 246, 178); // cd (w, ch)
+// [GUI Memory]: 130 MB (+650kb) [00:25:06]
+// Elapsed time: 66 seconds
+selectCodeEditor("chrono.vhd", 274, 311); // cd (w, ch)
+// Elapsed time: 31 seconds
+selectCodeEditor("chrono.vhd", 119, 426); // cd (w, ch)
+// Elapsed time: 25 seconds
+selectCodeEditor("chrono.vhd", 109, 448); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 102, 466); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 92, 246); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 152, 249); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, pong(Behavioral) (pong.vhd)]", 8, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, pong(Behavioral) (pong.vhd), b_down_1 : boutton(Behavioral) (boutton.vhd)]", 16, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), clock : clock_vga(Behavioral) (clock_vga.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), clock : clock_vga(Behavioral) (clock_vga.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 230, 248); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 79, 248); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), clock : clock_vga(Behavioral) (clock_vga.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), clock : clock_vga(Behavioral) (clock_vga.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("clock_vga.vhd", 42, 231); // cd (w, ch)
+selectCodeEditor("clock_vga.vhd", 42, 231, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 25, 246); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 25, 246, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 252, 261); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 252, 251); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 199, 201); // cd (w, ch)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pong.vhd", 1); // k (j, ch)
+// Elapsed time: 37 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "chrono.vhd", 4); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pong.vhd", 1); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "chrono.vhd", 4); // k (j, ch)
+selectCodeEditor("chrono.vhd", 2, 249); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 2, 249); // cd (w, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pong.vhd", 1); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "chrono.vhd", 4); // k (j, ch)
+selectCodeEditor("chrono.vhd", 180, 249); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 180, 249, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 639, 244); // cd (w, ch)
+// Elapsed time: 43 seconds
+selectCodeEditor("chrono.vhd", 50, 279); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 94, 296); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 217, 286); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 162, 289); // cd (w, ch)
+// Elapsed time: 15 seconds
+selectCodeEditor("chrono.vhd", 257, 244); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 262, 257); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 244, 284); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 262, 279); // cd (w, ch)
+// Elapsed time: 44 seconds
+selectCodeEditor("chrono.vhd", 222, 407); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 132, 412); // cd (w, ch)
+// [GUI Memory]: 138 MB (+1104kb) [00:30:58]
+// Elapsed time: 51 seconds
+selectCodeEditor("chrono.vhd", 70, 226); // cd (w, ch)
+// Elapsed time: 17 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("chrono.vhd", 309, 302); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 265, 322); // cd (w, ch)
+// Elapsed time: 36 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pong.vhd", 3); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "chrono.vhd", 4); // k (j, ch)
+// Elapsed time: 51 seconds
+selectCodeEditor("chrono.vhd", 237, 289); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 152, 452); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 127, 474); // cd (w, ch)
+// Elapsed time: 13 seconds
+selectCodeEditor("chrono.vhd", 202, 409); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 115, 481); // cd (w, ch)
+// Elapsed time: 19 seconds
+selectCodeEditor("chrono.vhd", 127, 414); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 127, 414, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 127, 414); // cd (w, ch)
+// Elapsed time: 47 seconds
+selectCodeEditor("chrono.vhd", 127, 402); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 129, 451); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 129, 449); // cd (w, ch)
+// Elapsed time: 60 seconds
+selectCodeEditor("chrono.vhd", 232, 436); // cd (w, ch)
+// Elapsed time: 18 seconds
+selectCodeEditor("chrono.vhd", 312, 286); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 217, 437); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 190, 452); // cd (w, ch)
+// HMemoryUtils.trashcanNow. Engine heap size: 717 MB. GUI used memory: 74 MB. Current time: 6/19/18 2:38:46 PM CEST
+// Elapsed time: 490 seconds
+selectCodeEditor("chrono.vhd", 95, 278); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 72, 161); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 99, 141); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 105, 158); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 104, 194); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 77, 181); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 249, 176); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 279, 173); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 79, 194); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 47, 359); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 179, 364); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 192, 401); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 62, 398); // cd (w, ch)
+// Elapsed time: 26 seconds
+selectCodeEditor("chrono.vhd", 265, 61); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 82, 54); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 270, 58); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 77, 79); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 77, 79); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 77, 79, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 77, 79); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 274, 76); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 80, 96); // cd (w, ch)
+// Elapsed time: 55 seconds
+selectCodeEditor("chrono.vhd", 94, 342); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 100, 344); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+// Elapsed time: 168 seconds
+selectCodeEditor("chrono.vhd", 170, 281); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 170, 281, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 325, 343); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 113, 319); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 110, 351); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 462, 58); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 467, 56); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 108, 71); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 108, 71); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 108, 61); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 212, 456); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 83, 326); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 192, 348); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 100, 346); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 100, 346, false, false, false, false, true); // cd (w, ch) - Double Click
+// Elapsed time: 54 seconds
+selectCodeEditor("chrono.vhd", 82, 74); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 182, 74); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 105, 96); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 107, 189); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 112, 447); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 107, 59); // cd (w, ch)
+// Elapsed time: 161 seconds
+selectCodeEditor("chrono.vhd", 472, 79); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 132, 81); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 125, 82); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 492, 64); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 492, 66); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 492, 71); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 124, 94); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 124, 94, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 112, 94); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 112, 94, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 130, 91); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 472, 96); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 124, 109); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 124, 109); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 124, 109); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 95, 179); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 92, 391); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 94, 382); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 109, 371); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 109, 379); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+// Elapsed time: 28 seconds
+selectCodeEditor("chrono.vhd", 104, 159); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 190, 151); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 127, 184); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 117, 199); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 130, 211); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 124, 247); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 134, 286); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 307, 284); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 127, 112); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 65, 146); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 67, 281); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 199, 344); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 342, 337); // cd (w, ch)
+// Elapsed time: 14 seconds
+selectCodeEditor("chrono.vhd", 112, 379); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 115, 401); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 122, 436); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 250, 331); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 85, 319); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 132, 317); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 82, 261); // cd (w, ch)
+// Elapsed time: 141 seconds
+selectCodeEditor("chrono.vhd", 192, 329); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 192, 329); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 192, 329, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 17 seconds
+selectCodeEditor("chrono.vhd", 179, 123); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 179, 123, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 45 seconds
+selectCodeEditor("chrono.vhd", 440, 287); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 135, 376); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 108, 279); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 497, 159); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 167, 191); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 272, 226); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 262, 189); // cd (w, ch)
+// Elapsed time: 14 seconds
+selectCodeEditor("chrono.vhd", 500, 169); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 475, 127); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 65 seconds
+selectCodeEditor("chrono.vhd", 202, 111); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 202, 111, false, false, false, false, true); // cd (w, ch) - Double Click
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 172, 113); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("chrono.vhd", 392, 199); // cd (w, ch)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("chrono.vhd", 149, 379); // cd (w, ch)
+// Elapsed time: 17 seconds
+selectCodeEditor("chrono.vhd", 389, 306); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 110, 456); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 97, 483); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 175, 489); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+// Elapsed time: 14 seconds
+selectCodeEditor("chrono.vhd", 184, 274); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 55, 289); // cd (w, ch)
+// Elapsed time: 13 seconds
+selectCodeEditor("chrono.vhd", 164, 291); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 164, 276); // cd (w, ch)
+// Elapsed time: 18 seconds
+selectCodeEditor("chrono.vhd", 400, 251); // cd (w, ch)
+// Elapsed time: 22 seconds
+selectCodeEditor("chrono.vhd", 405, 253); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 380, 211); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 42, 304); // cd (w, ch)
+// Elapsed time: 50 seconds
+selectCodeEditor("chrono.vhd", 144, 319); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 92, 351); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 289, 341); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 217, 388); // cd (w, ch)
+// Elapsed time: 12 seconds
+selectCodeEditor("chrono.vhd", 110, 331); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 102, 326); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 87, 318); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 74, 348); // cd (w, ch)
+// Elapsed time: 76 seconds
+selectCodeEditor("chrono.vhd", 307, 301); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 205, 323); // cd (w, ch)
+// HMemoryUtils.trashcanNow. Engine heap size: 717 MB. GUI used memory: 51 MB. Current time: 6/19/18 3:08:46 PM CEST
+// Elapsed time: 246 seconds
+selectCodeEditor("chrono.vhd", 87, 246); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 145, 416); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 262, 134); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 262, 134, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 262, 134); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 297, 233); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 319, 119); // cd (w, ch)
+// Elapsed time: 27 seconds
+selectCodeEditor("chrono.vhd", 367, 298); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 382, 303); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 505, 296); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 509, 296); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 465, 323); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 164, 309); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 394, 336); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 522, 329); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 182, 346); // cd (w, ch)
+// Elapsed time: 10 seconds
+selectCodeEditor("chrono.vhd", 117, 361); // cd (w, ch)
+// Elapsed time: 11 seconds
+selectCodeEditor("chrono.vhd", 137, 381); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 242, 386); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 109, 449); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 117, 469); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 117, 353); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 225, 304); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 87, 421); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 52, 313); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 192, 311); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 344, 311); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 317, 309); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 317, 309, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 317, 309); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 312, 318); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 312, 319, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 439, 314); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 439, 314, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 172, 363); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 65, 331); // cd (w, ch)
+// Elapsed time: 20 seconds
+selectCodeEditor("chrono.vhd", 54, 469); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 214, 461); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 42, 326); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 42, 326, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 120, 334); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 120, 334, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 162, 361); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 37, 364); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 37, 364, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 37, 388); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 37, 389); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 37, 389, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 122, 376); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 122, 376, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 277, 351); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 77, 343); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 222, 346); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 354, 351); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 354, 351, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 472, 348); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 472, 348, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 67, 399); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 67, 399, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 190, 406); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 190, 406, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 52, 458); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 42, 414); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 42, 414, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 347, 351); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 462, 349); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 50, 431); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 50, 431, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 159, 421); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 211 seconds
+selectCodeEditor("chrono.vhd", 157, 357); // cd (w, ch)
+// Elapsed time: 37 seconds
+selectCodeEditor("chrono.vhd", 119, 432); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 219, 444); // cd (w, ch)
+// Elapsed time: 16 seconds
+selectCodeEditor("chrono.vhd", 164, 97); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 164, 97, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 197, 77); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 197, 77, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 147, 87); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 147, 87, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 189, 87); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 189, 87, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 162, 114); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 162, 114, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 160, 132); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 160, 132, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 150, 164); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 292, 90); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 294, 129); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 122, 90); // cd (w, ch)
+// Elapsed time: 22 seconds
+selectCodeEditor("chrono.vhd", 315, 362); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 314, 142); // cd (w, ch)
+// Elapsed time: 26 seconds
+selectCodeEditor("chrono.vhd", 102, 295); // cd (w, ch)
+// Elapsed time: 14 seconds
+selectCodeEditor("chrono.vhd", 219, 387); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 185, 417); // cd (w, ch)
+// Elapsed time: 66 seconds
+selectCodeEditor("chrono.vhd", 124, 417); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 147, 417); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 50, 382); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 164, 405); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 172, 402); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 172, 412); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 222, 377); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 222, 405); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 229, 422); // cd (w, ch)
+// Elapsed time: 96 seconds
+selectCodeEditor("chrono.vhd", 102, 457); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 502, 412); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 189, 372); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 250, 235); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 167, 450); // cd (w, ch)
+// Elapsed time: 14 seconds
+selectCodeEditor("chrono.vhd", 167, 450); // cd (w, ch)
+// Elapsed time: 34 seconds
+selectCodeEditor("chrono.vhd", 127, 99); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 104, 380); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 114, 394); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("chrono.vhd", 182, 397); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 94, 392); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 54, 390); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 57, 399); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 154, 399); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 37, 350); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 237, 399); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 207, 360); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 597, 225); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 99, 217); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 132, 377); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 152, 422); // cd (w, ch)
+// Elapsed time: 238 seconds
+selectCodeEditor("chrono.vhd", 90, 404); // cd (w, ch)
+// Elapsed time: 16 seconds
+selectCodeEditor("chrono.vhd", 72, 104); // cd (w, ch)
+// Elapsed time: 14 seconds
+selectCodeEditor("chrono.vhd", 25, 312); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 20, 227); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 102, 230); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 115, 244); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 187, 284); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 117, 392); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 155 seconds
+selectCodeEditor("chrono.vhd", 220, 277); // cd (w, ch)
+// Elapsed time: 32 seconds
+selectCodeEditor("chrono.vhd", 315, 212); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 317, 424); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 229, 129); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 229, 129, false, true, false, false, false); // cd (w, ch) - Control Key
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 259, 354); // cd (w, ch)
+// Elapsed time: 20 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ch)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ch): Add Sources: addNotify
+dismissDialog("Add Sources"); // c (ch)
+selectCodeEditor("chrono.vhd", 657, 29); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 525, 251); // cd (w, ch)
+// Elapsed time: 12 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1); // B (D, ch)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, ch)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, ch)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, ch)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, ch)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, ch)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, ch)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, ch)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, ch)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // Z (ai, ch)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // Z (ai, ch)
+selectCodeEditor("chrono.vhd", 159, 111); // cd (w, ch)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ch)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ch): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "clk_sec"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 19 seconds
+dismissDialog("Add Sources"); // c (ch)
+// Tcl Message: close [ open {C:/Users/xmani/Desktop/Projet VHDL/pong/Pong_vhdl.srcs/sources_1/new/clk_sec.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/xmani/Desktop/Projet VHDL/pong/Pong_vhdl.srcs/sources_1/new/clk_sec.vhd}} 
+// I (ch): Define Module: addNotify
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 0, (String) null, 0); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "clk", 0, "Port Name", 0); // ab (O, I)
+// Elapsed time: 15 seconds
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "clk_s", 1, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "clk_s ; in ; false ; 0 ; 0", 1, "in", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 1, "Direction", 1); // ab (O, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("chrono.vhd", 292, 289); // cd (w, ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("chrono.vhd", 257, 299); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("clk_sec.vhd", 269, 424); // cd (w, ch)
+selectCodeEditor("clk_sec.vhd", 262, 434); // cd (w, ch)
+typeControlKey((HResource) null, "clk_sec.vhd", 'v'); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+// Elapsed time: 28 seconds
+selectCodeEditor("chrono.vhd", 85, 464); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("clk_sec.vhd", 119, 414); // cd (w, ch)
+selectCodeEditor("clk_sec.vhd", 87, 392); // cd (w, ch)
+typeControlKey((HResource) null, "clk_sec.vhd", 'v'); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 462, 209); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("clk_sec.vhd", 87, 219); // cd (w, ch)
+typeControlKey((HResource) null, "clk_sec.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("clk_sec.vhd", 264, 346); // cd (w, ch)
+selectCodeEditor("clk_sec.vhd", 214, 229); // cd (w, ch)
+selectCodeEditor("clk_sec.vhd", 32, 419); // cd (w, ch)
+selectCodeEditor("clk_sec.vhd", 32, 419, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("clk_sec.vhd", 32, 419); // cd (w, ch)
+// HMemoryUtils.trashcanNow. Engine heap size: 717 MB. GUI used memory: 52 MB. Current time: 6/19/18 3:38:46 PM CEST
+selectCodeEditor("clk_sec.vhd", 17, 422); // cd (w, ch)
+selectCodeEditor("clk_sec.vhd", 61, 127); // cd (w, ch)
+selectCodeEditor("clk_sec.vhd", 129, 164); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 192, 190); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("clk_sec.vhd", 217, 270); // cd (w, ch)
+typeControlKey((HResource) null, "clk_sec.vhd", 'v'); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 76 seconds
+selectCodeEditor("clk_sec.vhd", 132, 434); // cd (w, ch)
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 157, 350); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 89, 320); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 147, 349); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 2, 317, false, false, false, true, false); // cd (w, ch) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_CUT, "Cut"); // ac (ai, Popup.HeavyWeightWindow)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 161 seconds
+selectCodeEditor("chrono.vhd", 99, 107); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true, false, false, false, true, false); // B (D, ch) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (D, ch) - Node
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ch)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ch): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "clk_min"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 17 seconds
+dismissDialog("Add Sources"); // c (ch)
+// Tcl Message: close [ open {C:/Users/xmani/Desktop/Projet VHDL/pong/Pong_vhdl.srcs/sources_1/new/clk_min.vhd} w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files {{C:/Users/xmani/Desktop/Projet VHDL/pong/Pong_vhdl.srcs/sources_1/new/clk_min.vhd}} 
+// I (ch): Define Module: addNotify
+// Elapsed time: 70 seconds
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 0, (String) null, 0); // ab (O, I)
+selectButton(RDIResource.AbstractCombinedPanel_ADD_ELEMENT, "Add Definition"); // B (f, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "clk", 0, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, " ; in ; false ; 0 ; 0", 1, (String) null, 0); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "clk_m", 1, "Port Name", 0); // ab (O, I)
+selectTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "clk_m ; in ; false ; 0 ; 0", 1, "in", 1); // ab (O, I)
+editTable(PAResourceAtoD.DefineModulesDialog_DEFINE_MODULES_AND_SPECIFY_IO_PORTS, "out", 1, "Direction", 1); // ab (O, I)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+dismissDialog("Define Module"); // I (ch)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_min(Behavioral) (clk_min.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_min(Behavioral) (clk_min.vhd)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 4, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 4, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("clk_sec.vhd", 207, 154); // cd (w, ch)
+typeControlKey((HResource) null, "clk_sec.vhd", 'c'); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_min(Behavioral) (clk_min.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_min(Behavioral) (clk_min.vhd)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("clk_min.vhd", 229, 210); // cd (w, ch)
+typeControlKey((HResource) null, "clk_min.vhd", 'v'); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 109, 415); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 85, 464); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_min(Behavioral) (clk_min.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_min(Behavioral) (clk_min.vhd)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("clk_min.vhd", 179, 400); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 84, 442); // cd (w, ch)
+typeControlKey((HResource) null, "clk_min.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 54, 195); // cd (w, ch)
+// Elapsed time: 38 seconds
+selectCodeEditor("clk_min.vhd", 206, 195); // cd (w, ch)
+// Elapsed time: 14 seconds
+selectCodeEditor("clk_min.vhd", 234, 202); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 246, 209); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 234, 207); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 279, 214); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 301, 259); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 279, 174); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 221, 209); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 314, 187); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 207, 257); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 276, 202); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 241, 307); // cd (w, ch)
+// Elapsed time: 33 seconds
+selectCodeEditor("clk_min.vhd", 194, 269); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 674, 367); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 592, 316); // cd (w, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "chrono.vhd", 4); // k (j, ch)
+selectCodeEditor("chrono.vhd", 327, 246); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 484, 109); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clk_min.vhd", 7); // k (j, ch)
+selectCodeEditor("clk_min.vhd", 279, 184); // cd (w, ch)
+typeControlKey((HResource) null, "clk_min.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 314, 209); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 314, 209); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 314, 209); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 26 seconds
+selectCodeEditor("clk_min.vhd", 124, 409); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 84, 441); // cd (w, ch)
+selectCodeEditor("clk_min.vhd", 84, 419); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 22 seconds
+selectCodeEditor("clk_min.vhd", 67, 399); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 4, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 4, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("clk_sec.vhd", 59, 382); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 76 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+// Elapsed time: 29 seconds
+selectCodeEditor("chrono.vhd", 89, 257); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 89, 257, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 210, 259); // cd (w, ch)
+// Elapsed time: 12 seconds
+selectCodeEditor("chrono.vhd", 252, 257); // cd (w, ch)
+// Elapsed time: 13 seconds
+selectCodeEditor("chrono.vhd", 132, 379); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 107, 329); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 72, 361); // cd (w, ch)
+// Elapsed time: 11 seconds
+selectCodeEditor("chrono.vhd", 282, 112); // cd (w, ch)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_min(Behavioral) (clk_min.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_min(Behavioral) (clk_min.vhd)]", 3, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 4, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_sec(Behavioral) (clk_sec.vhd)]", 4, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd), nombreJ2 : breakNumber(Behavioral) (breakNumber.vhd)]", 10, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("score.vhd", 106, 291); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd), DigitUniteJ2 : digit(Behavioral) (digit.vhd)]", 12, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd), nombreJ2 : breakNumber(Behavioral) (breakNumber.vhd)]", 10, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd), nombreJ2 : breakNumber(Behavioral) (breakNumber.vhd)]", 10, false, false, false, false, false, true); // B (D, ch) - Double Click
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectCodeEditor("score.vhd", 117, 379); // cd (w, ch)
+typeControlKey((HResource) null, "score.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "score.vhd", 'c'); // cd (w, ch)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 109, 217); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), clock : clock_vga(Behavioral) (clock_vga.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 102, 235); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 87, 220); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+// Elapsed time: 12 seconds
+selectCodeEditor("chrono.vhd", 107, 300); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 107, 300); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 82, 299); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 82, 299, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 112, 297); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 112, 297, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 279, 292); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 77, 320); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 90, 312); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 90, 312, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 219, 317); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 219, 317, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 297, 292); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clk_min(Behavioral) (clk_min.vhd)]", 3, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 139, 282); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 172, 324); // cd (w, ch)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pong.vhd", 3); // k (j, ch)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "chrono.vhd", 4); // k (j, ch)
+selectCodeEditor("chrono.vhd", 94, 285); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 94, 285, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 229, 260); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd), nombreJ2 : breakNumber(Behavioral) (breakNumber.vhd)]", 10, false, false, false, false, false, true); // B (D, ch) - Double Click
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 14, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 14, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 137, 280); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 137, 280, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 137, 280); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 137, 280); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 137, 322); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 14, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 14, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 215, 292); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 237, 305); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 227, 312); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 132, 325); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), paddle_j2 : paddle_driver(Behavioral) (paddle_driver.vhd)]", 13, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), paddle_j2 : paddle_driver(Behavioral) (paddle_driver.vhd)]", 13, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+// Elapsed time: 241 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd), DigitUniteJ1 : digit(Behavioral) (digit.vhd)]", 9, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 14, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 14, false, false, false, false, false, true); // B (D, ch) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("chrono.vhd", 80, 186); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 94, 308); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 109, 301); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 29, 249); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 305, 161); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 125, 241); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 122, 246); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 119, 274); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 112, 309); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), ps2 : ps2_keyboard(logic) (ps2_keyboard.vhd)]", 7, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd), DigitDizaineJ2 : digit(Behavioral) (digit.vhd)]", 11, false, false, false, false, false, true); // B (D, ch) - Double Click
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 22, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 22, false, false, false, false, false, true); // B (D, ch) - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// k (ch): Text Changed: addNotify
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B (k, ch)
+selectButton(RDIResource.ConfirmSaveTextEditsDialog_YES, "Yes"); // a (k)
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Text Changed"); // k (ch)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 22, false); // B (D, ch)
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 22, false, false, false, false, false, true); // B (D, ch) - Double Click
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// Elapsed time: 227 seconds
+selectCodeEditor("chrono.vhd", 24, 21); // cd (w, ch)
+// Elapsed time: 26 seconds
+selectCodeEditor("chrono.vhd", 90, 271); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd), nombreJ1 : breakNumber(Behavioral) (breakNumber.vhd)]", 7, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd), nombreJ1 : breakNumber(Behavioral) (breakNumber.vhd)]", 7, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+// Elapsed time: 12 seconds
+selectCodeEditor("score.vhd", 757, 274); // cd (w, ch)
+typeControlKey((HResource) null, "score.vhd", 'c'); // cd (w, ch)
+typeControlKey((HResource) null, "score.vhd", 'c'); // cd (w, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 14, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 14, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectCodeEditor("chrono.vhd", 465, 372); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 50, 219); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 9, 192); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'v'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 9, 194); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 9, 194, false, false, false, false, true); // cd (w, ch) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("chrono.vhd", 160, 180); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 160, 197); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 160, 197, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 710, 205); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 709, 205, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 702, 205); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 702, 205, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 702, 200); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 702, 200, false, false, false, false, true); // cd (w, ch) - Double Click
+// Elapsed time: 22 seconds
+selectCodeEditor("chrono.vhd", 302, 74); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 162, 62); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 77, 75); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 70, 74); // cd (w, ch)
+// HMemoryUtils.trashcanNow. Engine heap size: 717 MB. GUI used memory: 57 MB. Current time: 6/19/18 4:08:47 PM CEST
+// Elapsed time: 25 seconds
+selectCodeEditor("chrono.vhd", 229, 420); // cd (w, ch)
+// Elapsed time: 43 seconds
+selectCodeEditor("chrono.vhd", 139, 125); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 139, 125, false, false, false, false, true); // cd (w, ch) - Double Click
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd), DigitDizaineJ2 : digit(Behavioral) (digit.vhd)]", 11, false, false, false, false, false, true); // B (D, ch) - Double Click
+// Elapsed time: 37 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 22, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 22, false, false, false, false, false, true); // B (D, ch) - Double Click
+// Elapsed time: 25 seconds
+selectCodeEditor("chrono.vhd", 182, 147); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 182, 147, false, false, false, false, true); // cd (w, ch) - Double Click
+selectCodeEditor("chrono.vhd", 182, 147); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 499, 335); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 0, 322); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 480, 332); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 647, 282); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 482, 327); // cd (w, ch)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("chrono.vhd", 249, 457); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 242, 440); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 364, 454); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 304, 450); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 122, 280); // cd (w, ch)
+// Elapsed time: 16 seconds
+selectCodeEditor("chrono.vhd", 295, 319); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 345, 312); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 432, 310); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 42, 265); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 52, 29); // cd (w, ch)
+// Elapsed time: 51 seconds
+selectCodeEditor("chrono.vhd", 84, 164); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 409, 399); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 537, 392); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 140, 397); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 82, 397); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 235, 394); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 429, 394); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 484, 402); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 484, 402); // cd (w, ch)
+typeControlKey((HResource) null, "chrono.vhd", 'c'); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 472, 392); // cd (w, ch)
+// Elapsed time: 36 seconds
+selectCodeEditor("chrono.vhd", 417, 312); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 212, 67); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 115, 65); // cd (w, ch)
+selectCodeEditor("chrono.vhd", 297, 47); // cd (w, ch)
+// Elapsed time: 61 seconds
+selectCodeEditor("chrono.vhd", 362, 242); // cd (w, ch)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 22); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd), compteur_sec : clk_sec(Behavioral) (clk_sec.vhd)]", 23, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd), compteur_sec : clk_sec(Behavioral) (clk_sec.vhd)]", 23, false, false, false, false, false, true); // B (D, ch) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 22, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 22, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), scoreDigit : score(Behavioral) (score.vhd)]", 6); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd), b_down_1 : boutton(Behavioral) (boutton.vhd)]", 9, false); // B (D, ch)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pong(Behavioral) (pong.vhd)]", 1, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+// Elapsed time: 56 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, true); // B (D, ch) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, chrono(Behavioral) (chrono.vhd)]", 2, true, false, false, false, false, true); // B (D, ch) - Double Click - Node
+// Elapsed time: 30 seconds
+selectCodeEditor("chrono.vhd", 282, 255); // cd (w, ch)
