@@ -85,7 +85,7 @@ signal  r_d3 , g_d3 , b_d3: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_d4 , g_d4 , b_d4: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_b , g_b , b_b: STD_LOGIC_VECTOR (3 downto 0):="0000";
 
-signal  r_out , g_out , b_out: STD_LOGIC_VECTOR (3 downto 0):="0000";
+signal  r_pad , g_pad , b_pad: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal uniteJ1 , dizaineJ1, uniteJ2, dizaineJ2 : integer range 0 to 9 := 0;
 begin
 
@@ -143,51 +143,41 @@ balle : draw_balle port map(
             red => r_b,
             green => g_b,
             blue => b_b); 
-            
-     process(hpos, vpos,blank,r_b,paddle_h1,paddle_v1,paddle_v2,paddle_h2,b_b,g_b,g_d1,g_d2,g_d3,g_d4)
+process(hpos, vpos,blank,paddle_h1,paddle_v1,paddle_v2,paddle_h2)
      begin
-        r_out <="0000";
-        g_out <= "0000";
-        b_out<="0000";
          if( blank = '0')then
-             if(r_b /="0000") then
-                r_out <= r_b;
-             elsif((hpos >= paddle_h1 and hpos < paddle_h1 + 5) and (vpos >= paddle_v1 and vpos < paddle_v1 + 40))then
-                r_out <= "1111";
+            --Rouge
+            if((hpos >= paddle_h1 and hpos < paddle_h1 + 5) and (vpos >= paddle_v1 and vpos < paddle_v1 + 40))then
+                r_pad <= "1111";
              elsif((hpos >= paddle_h2 and hpos < paddle_h2 + 5) and (vpos >= paddle_v2 and vpos < paddle_v2 + 40))then
-                r_out <= "1111";
+                r_pad <= "1111";
              elsif (hpos <3 or vpos >476 or hpos > 636 or vpos < 3) then
-                r_out <="1111";
-             end if;
-                     
-             if(b_b /="0000") then
-                b_out <= b_b;
-             elsif((hpos >= paddle_h2 and hpos < paddle_h2 + 5) and (vpos >= paddle_v2 and vpos < paddle_v2 + 40))then
-                b_out <= "1111";
-             elsif(hpos <3 or vpos >476 or hpos > 636 or vpos < 3) then
-                b_out <="1111";
+                r_pad <="1111";
+             else
+                 r_pad <= "0000";   
              end if;
              
-             if(g_b /="0000") then
-                g_out <= g_b;
-             elsif((hpos >= paddle_h1 and hpos < paddle_h1 + 5) and (vpos >= paddle_v1 and vpos < paddle_v1 + 40))then
-                g_out <= "1111";
-             elsif(g_d1 /="0000") then
-                g_out <= g_d1;
-             elsif(g_d2 /="0000") then
-                g_out <= g_d2;
-             elsif(g_d3 /="0000") then
-                g_out <= g_d3;
-             elsif(g_d4 /="0000") then
-                g_out <= g_d4;
+             --bleu
+             if((hpos >= paddle_h2 and hpos < paddle_h2 + 5) and (vpos >= paddle_v2 and vpos < paddle_v2 + 40))then
+                b_pad <= "1111";
+             elsif(hpos <3 or vpos >476 or hpos > 636 or vpos < 3) then
+                b_pad <="1111";
+             else
+                 b_pad <="0000";  
+             end if;
+            --vert
+            if((hpos >= paddle_h1 and hpos < paddle_h1 + 5) and (vpos >= paddle_v1 and vpos < paddle_v1 + 40))then
+                g_pad <= "1111";
              elsif (hpos <3 or vpos >476 or hpos > 636 or vpos < 3) then
-                g_out <="1111";
+                g_pad <="1111";
+             else 
+                g_pad <="0000" ;
              end if;
          end if;
      end process;
 
-    rouge <=r_out;
-    bleu <= b_out;
-    vert <= g_out;         
+    rouge <=r_pad or r_b;
+    bleu <= b_pad or b_b;
+    vert <= g_pad or g_d1 or g_d2 or g_d3 or g_d4 or g_b;         
 
 end Behavioral;
