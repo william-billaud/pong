@@ -10,8 +10,8 @@ set_property PACKAGE_PIN W5 [get_ports clk]
 	
 #set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets pause_IBUF]
 # Switches
-#set_property PACKAGE_PIN V17 [get_ports {sw[0]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}]
+set_property PACKAGE_PIN V17 [get_ports {sw}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw}]
 #set_property PACKAGE_PIN V16 [get_ports {sw[1]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {sw[1]}]
 #set_property PACKAGE_PIN W16 [get_ports {sw[2]}]					
@@ -133,8 +133,8 @@ set_property PACKAGE_PIN U18 [get_ports reset]
 #set_property PACKAGE_PIN J2 [get_ports {JA[2]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[2]}]
 ##Sch name = JA4
-#set_property PACKAGE_PIN G2 [get_ports {JA[3]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[3]}]
+set_property PACKAGE_PIN G2 [get_ports {speaker}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {speaker}]
 ##Sch name = JA7
 #set_property PACKAGE_PIN H1 [get_ports {JA[4]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JA[4]}]

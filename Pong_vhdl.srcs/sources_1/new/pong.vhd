@@ -15,7 +15,9 @@ entity pong is
            digit_OUT : out STD_LOGIC_VECTOR (6 downto 0);
            digit_choice : out STD_LOGIC_VECTOR (3 downto 0);
            PS2Clk : in STD_LOGIC;
-           PS2Data : in STD_LOGIC
+           PS2Data : in STD_LOGIC;
+           sw: in STD_LOGIC;
+           speaker : out STD_LOGIC
            );
 end pong;
 
@@ -128,6 +130,13 @@ component move_ball is
      );
 end component;
 
+component buzzer is
+    Port ( 
+      CLK : in STD_LOGIC;
+      sw: in STD_LOGIC;
+      speaker : out STD_LOGIC
+    );
+  end component;
 
 signal vga_clk : std_logic:='0'; 
 signal rst : std_logic:='0'; 
@@ -251,5 +260,7 @@ deplacement_balle : move_ball port map(
     vBalle=>ball_pos_v1,
     scoreJ1_out=> scoreJ1,
     scoreJ2_out=> scoreJ2);
+
+musique: buzzer port map(CLK=>clk,sw=>sw,speaker=>speaker);
 
 end Behavioral;
