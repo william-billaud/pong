@@ -162,12 +162,16 @@ balle : draw_balle port map(
                      
              if(b_b /="0000") then
                 b_out <= b_b;
+             elsif((hpos >= paddle_h2 and hpos < paddle_h2 + 5) and (vpos >= paddle_v2 and vpos < paddle_v2 + 40))then
+                b_out <= "1111";
              elsif(hpos <3 or vpos >476 or hpos > 636 or vpos < 3) then
                 b_out <="1111";
              end if;
              
              if(g_b /="0000") then
                 g_out <= g_b;
+             elsif((hpos >= paddle_h1 and hpos < paddle_h1 + 5) and (vpos >= paddle_v1 and vpos < paddle_v1 + 40))then
+                g_out <= "1111";
              elsif(g_d1 /="0000") then
                 g_out <= g_d1;
              elsif(g_d2 /="0000") then

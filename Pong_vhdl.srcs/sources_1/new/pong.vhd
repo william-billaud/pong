@@ -108,14 +108,14 @@ signal paddle_h1 : integer range 0 to 800:= 600;
 signal paddle_v1 : integer range 0 to 800:= 220;
 signal paddle_h2 : integer range 0 to 800:= 30;
 signal paddle_v2 : integer range 0 to 800:= 220;
-signal paddle_speed	: integer range 0 to 15:= 2;
+signal paddle_speed	: integer range 0 to 15:= 4;
 
 signal ball_pos_h1 : integer range 0 to 800:= 318;
 signal ball_pos_v1 : integer range 0 to 800:= 238;
 signal ball_up : std_logic:= '0';
 signal ball_right : std_logic:= '1';
-signal ball_speed_h	: integer range 0 to 15:= 2;
-signal ball_speed_v	: integer range 0 to 15:= 2;
+signal ball_speed_h	: integer range 0 to 5:= 2;
+signal ball_speed_v	: integer range 0 to 5:= 2;
 
 signal scoreJ1	: integer range 0 to 99:= 0;
 signal scoreJ2	: integer range 0 to 99:= 0;
@@ -206,7 +206,7 @@ begin
 				paddle_v2 <= paddle_v2 + paddle_speed;
 			end if;
 		elsif ( p1_down = '1') then  
-			if (paddle_v2 > 0) then
+			if (paddle_v2 > 3) then
 				paddle_v2 <= paddle_v2 - paddle_speed;
 			end if;
 		end if;
@@ -216,7 +216,7 @@ begin
 				paddle_v1 <= paddle_v1 + paddle_speed;
 			end if;
 		elsif (p2_down = '1') then
-			if (paddle_v1 > 0) then
+			if (paddle_v1 > 3) then
 				paddle_v1 <= paddle_v1 - paddle_speed;
 			end if;
 		end if;
@@ -232,6 +232,7 @@ begin
 	   if (reset = '1') then
     	   ball_pos_v1 <= 218;
 		   ball_pos_h1 <= 318;
+		  --- ball_speed_v <=2;
 		   scoreJ1 <= 0;
 		   scoreJ2<=0;
     	else
@@ -265,9 +266,27 @@ begin
 	if (rising_edge(vga_clk) and new_frame = '1') then
         if(ball_pos_h1 <= (paddle_h1 + 5) and (ball_pos_h1+3) > paddle_h1 and ball_pos_v1 >= paddle_v1 and ball_pos_v1 < (paddle_v1+40) )  then
             ball_right <= '0'; 
+            if((p1_up = '1' and ball_up = '1') or (p1_down ='0' and ball_up ='0' )) then                
+                if(ball_speed_v > 1)then
+                    ball_speed_v <= ball_speed_v -1;
+                end if;
+            elsif((p1_up = '1' and ball_up = '0') or (p1_down ='0' and ball_up ='1'))then
+                if(ball_speed_v <4) then
+                    ball_speed_v <= ball_speed_v + 1;
+                end if;
+            end if;
         end if;
         if((ball_pos_h1 +3) >= paddle_h2 and ball_pos_h1 < (paddle_h2+5) and ball_pos_v1 >= (paddle_v2) and ball_pos_v1 < (paddle_v2+40)) then
             ball_right <= '1';
+             if((p2_up = '1' and ball_up = '1') or (p2_down ='0' and ball_up ='0' )) then
+                  if(ball_speed_v > 1)then
+                      ball_speed_v <= ball_speed_v -1;
+                   end if;
+             elsif((p2_up = '1' and ball_up = '0') or (p2_down ='0' and ball_up ='1'))then
+                 if(ball_speed_v < 4) then 
+                     ball_speed_v <= ball_speed_v + 1;
+                  end if;
+             end if;
         end if;			
 	end if;
 		 

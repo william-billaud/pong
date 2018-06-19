@@ -54,34 +54,50 @@ begin
         if(hpos = start_h) then
             if(vpos > start_v+2 and vpos < start_v+5) then
                 red <= "1111";
+                green <="1111";
+                blue <= "1111";
              end if;
         elsif(hpos = start_h +1) then
              if(vpos > start_v and vpos < start_v+7) then     
                  red <= "1111";
+                 blue <= "1111";
+                 green <="1111";
              end if;
         elsif(hpos = start_h +2 ) then
              if(vpos > start_v and vpos < start_v+7) then     
                  red <= "1111";
+                 blue <= "1111";
+                 green <="1111";
              end if;
         elsif(hpos = start_h +3) then
              if(vpos >= start_v and vpos < start_v+8) then     
                  red <= "1111";
+                 blue <= "1111";
+                 green <="1111";
              end if;
         elsif(hpos = start_h + 4) then
              if(vpos >= start_v and vpos < start_v+8) then     
                  red <= "1111";
+                 blue <= "1111";
+                 green <="1111";
              end if;
         elsif(hpos = start_h +5) then
              if(vpos > start_v and vpos < start_v+7) then     
                  red <= "1111";
+                 blue <= "1111";
+                 green <="1111";
              end if;
         elsif(hpos = start_h+6) then
              if(vpos > start_v and vpos < start_v+7) then     
                  red <= "1111";
+                 blue <= "1111";
+                 green <="1111";
              end if;
         elsif(hpos = start_h +7) then
              if(vpos > start_v+2 and vpos < start_v+5) then     
                  red <= "1111";
+                 blue <= "1111";
+                 green <="1111";
              end if;
        end if;
         
