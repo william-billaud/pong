@@ -66,7 +66,7 @@ architecture Behavioral of move_ball is
     signal scoreJ2	: integer range 0 to 99:= 0;
 
 begin
- process (vga_clk) 
+ move_ball : process (vga_clk, p1_up,p1_down,p2_down,p2_up) 
 begin
  
 	if (rising_edge(vga_clk) and new_frame = '1') then
@@ -107,28 +107,28 @@ begin
 			end if;
 		  
 		     -- rebond paddle 1
-            if(ball_pos_h1 <= (paddle_h1 + 5) and (ball_pos_h1+3) > paddle_h1 and ball_pos_v1 >= paddle_v1 and ball_pos_v1 < (paddle_v1+40) )  then                
-                if((p1_up = '1' and ball_up = '1') or (p1_down ='1' and ball_up ='0' )) then                
-                    if(ball_speed_v < 4)then
-                        ball_speed_v <= ball_speed_v + 1;
-                    end if;
-                elsif((p1_up = '1' and ball_up = '0') or (p1_down ='1' and ball_up ='1'))then
-                    if(ball_speed_v > 1) then
-                        ball_speed_v <= ball_speed_v - 1;
-                    end if;
+            if(ball_pos_h1 <= (paddle_h1 + 5) and (ball_pos_h1+8) > paddle_h1 and ball_pos_v1 >= paddle_v1 and ball_pos_v1 < (paddle_v1+40) )  then                
+                if((p2_up = '1' and ball_up = '1') or (p2_down ='1' and ball_up ='0' )) then                                  
+                    if(ball_speed_v < 4) then
+                         ball_speed_v <= ball_speed_v + 1;
+                     end if;
+                elsif((p2_up = '1' and ball_up = '0') or (p2_down ='1' and ball_up ='1'))then
+                    if(ball_speed_v > 1)then
+                         ball_speed_v <= ball_speed_v - 1;
+                     end if;
                 end if;
                 ball_right <= '0'; 
             end if;
             
             -- rebond paddle 2
-            if((ball_pos_h1 +8) >= paddle_h2 and ball_pos_h1 < (paddle_h2+5) and ball_pos_v1 >= (paddle_v2) and ball_pos_v1 < (paddle_v2+40)) then    
-                 if((p2_up = '1' and ball_up = '1') or (p2_down ='1' and ball_up ='0' )) then
-                      if(ball_speed_v < 4)then
+            if((ball_pos_h1 + 8) >= paddle_h2 and ball_pos_h1 < (paddle_h2+5) and ball_pos_v1 >= (paddle_v2) and ball_pos_v1 < (paddle_v2+40)) then    
+                 if((p1_up = '1' and ball_up = '1') or (p1_down ='1' and ball_up ='0' )) then
+                      if(ball_speed_v < 4) then 
                           ball_speed_v <= ball_speed_v + 1;
-                       end if;
-                 elsif((p2_up = '1' and ball_up = '0') or (p2_down ='1' and ball_up ='1'))then
-                     if(ball_speed_v > 1) then 
-                         ball_speed_v <= ball_speed_v - 1;
+                      end if;
+                 elsif((p1_up = '1' and ball_up = '0') or (p1_down ='1' and ball_up ='1'))then
+                      if(ball_speed_v > 1)then
+                           ball_speed_v <= ball_speed_v - 1;
                       end if;
                  end if;
                  ball_right <= '1';
