@@ -76,14 +76,25 @@ component draw_balle is
            blue : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
 
+component draw_paddle is
+    Port ( hpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
+           vpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
+           blank : in STD_LOGIC;
+           paddle_h : in integer range 0 to 800;
+           paddle_v : in integer range 0 to 800;
+           rouge : out STD_LOGIC_VECTOR (3 downto 0);
+           bleu : out STD_LOGIC_VECTOR (3 downto 0);
+           vert : out STD_LOGIC_VECTOR (3 downto 0));
+end component;
+
 signal  r_d1 , g_d1 , b_d1: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_d2 , g_d2 , b_d2: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_d3 , g_d3 , b_d3: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_d4 , g_d4 , b_d4: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_b , g_b , b_b: STD_LOGIC_VECTOR (3 downto 0):="0000";
 
-signal  r_pad , g_pad , b_pad: STD_LOGIC_VECTOR (3 downto 0):="0000";
-
+signal  r_pad_1 , g_pad_1 , b_pad_1: STD_LOGIC_VECTOR (3 downto 0):="0000";
+signal  r_pad_2 , g_pad_2 , b_pad_2: STD_LOGIC_VECTOR (3 downto 0):="0000";
 begin
     
 scoreJoueur2 : number_screen port map(
@@ -133,41 +144,31 @@ balle : draw_balle port map(
             red => r_b,
             green => g_b,
             blue => b_b); 
-process(hpos, vpos,blank,paddle_h1,paddle_v1,paddle_v2,paddle_h2)
-     begin        
-        r_pad <="0000";
-        g_pad <= "0000";
-        b_pad<="0000";
 
-         if( blank = '0')then
-            --Rouge
-            if((hpos >= paddle_h1 and hpos < paddle_h1 + 5) and (vpos >= paddle_v1 and vpos < paddle_v1 + 40))then
-                r_pad <= "1111";
-             elsif((hpos >= paddle_h2 and hpos < paddle_h2 + 5) and (vpos >= paddle_v2 and vpos < paddle_v2 + 40))then
-                r_pad <= "1111";
-             elsif (hpos <3 or vpos >476 or hpos > 636 or vpos < 3) then
-                r_pad <="1111"; 
-             end if;
-             
-             --bleu
-             if((hpos >= paddle_h2 and hpos < paddle_h2 + 5) and (vpos >= paddle_v2 and vpos < paddle_v2 + 40))then
-                b_pad <= "1111";
-             elsif(hpos <3 or vpos >476 or hpos > 636 or vpos < 3) then
-                b_pad <="1111";
-             end if;
-            --vert
-            if((hpos >= paddle_h1 and hpos < paddle_h1 + 5) and (vpos >= paddle_v1 and vpos < paddle_v1 + 40))then
-                g_pad <= "1111";
-             elsif (hpos <3 or vpos >476 or hpos > 636 or vpos < 3) then
-                g_pad <="1111";
-             end if;
-         else 
-      
-         end if;
-     end process;
+pad_1 : draw_paddle port map(
+        hpos => hpos,
+        vpos => vpos,
+        blank => blank,
+        paddle_h => paddle_h1,
+        paddle_v => paddle_v1,
+        rouge => r_pad_1,
+        vert => g_pad_1,
+        bleu => b_pad_1
+        );
 
-    rouge <=r_pad or r_b;
-    bleu <= b_pad or b_b;
-    vert <= g_pad or g_d1 or g_d2 or g_d3 or g_d4 or g_b;         
+pad_2 : draw_paddle port map(
+        hpos => hpos,
+        vpos => vpos,
+        blank => blank,
+        paddle_h => paddle_h2,
+        paddle_v => paddle_v2,
+        rouge => r_pad_2,
+        vert => g_pad_2,
+        bleu => b_pad_2
+        );        
+
+    rouge <= r_b or r_pad_1 or r_pad_2;
+    bleu <= b_b or b_pad_2;
+    vert <= g_d1 or g_d2 or g_d3 or g_d4 or g_b or g_pad_1;         
 
 end Behavioral;
