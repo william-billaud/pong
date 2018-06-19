@@ -37,6 +37,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity clk_min is
     Port ( clk : in STD_LOGIC;
+           reset : in STD_LOGIC; 
            clk_m : out STD_LOGIC);
 end clk_min;
 
@@ -48,9 +49,13 @@ signal clk_min_int : STD_LOGIC := '0';
 begin
 
 
-process(clk)
+process(clk,reset,clk_min_int)
 begin
-if(clk'event and clk = '1') then
+
+if(reset ='1') then 
+    compteur_m <= X"00000000";
+    clk_min_int<='0';  
+elsif(clk'event and clk = '1') then
     compteur_m <= compteur_m + 1;
     if(compteur_m =  X"B2D05E00") then
         if(clk_min_int = '1') then

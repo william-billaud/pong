@@ -62,7 +62,8 @@ end component;
 
 component frame_c is
 	Port ( hpos : in std_logic_vector(10 downto 0);
-	vpos : in std_logic_vector(10 downto 0);
+    vpos : in std_logic_vector(10 downto 0);
+    in_progress : in std_logic;
 	new_frame : out STD_LOGIC);
 end component;
 
@@ -136,7 +137,15 @@ component buzzer is
       sw: in STD_LOGIC;
       speaker : out STD_LOGIC
     );
-  end component;
+end component;
+
+component chrono is
+    Port ( clk : in STD_LOGIC; 
+            reset : in std_logic;  
+            sec : out integer range 0 to 59;
+            min : out integer range 0 to 3;
+            in_progress : out STD_LOGIC);
+end component;
 
 signal vga_clk : std_logic:='0'; 
 signal rst : std_logic:='0'; 
@@ -164,6 +173,9 @@ signal p1_down : STD_LOGIC :='0';
 signal p2_up :  STD_LOGIC := '0';
 signal p2_down : STD_LOGIC :='0';
 
+signal in_progress : std_logic;
+signal sec : integer range 0 to 59;
+signal min : integer range 0 to 3;
 
 signal reset : STD_LOGIC :='0';
 begin
@@ -183,7 +195,7 @@ vga : vga_controller_640_60 port map (
   vcount=>vpos,
   blank=> blank);
   
-frame : frame_c port map(hpos=>hpos,vpos=>vpos,new_frame=>new_frame);
+frame : frame_c port map(hpos=>hpos,vpos=>vpos,in_progress=> in_progress,new_frame=>new_frame);
 
 rgb : RGB_controller port map(
 	hpos=>hpos,
@@ -202,8 +214,8 @@ rgb : RGB_controller port map(
     scoreJ2 => scoreJ2);
 
 scoreDigit : score port map(
-    scoreJ1 => scoreJ1,
-    scoreJ2 => scoreJ2,
+    scoreJ1 => sec,
+    scoreJ2 => min,
     digit_OUT => digit_OUT,
     digit_choice => digit_choice,
     CLK =>clk);
@@ -262,5 +274,10 @@ deplacement_balle : move_ball port map(
     scoreJ2_out=> scoreJ2);
 
 musique: buzzer port map(CLK=>clk,sw=>sw,speaker=>speaker);
+timer : chrono port map(clk=>clk,
+    reset => reset,
+    sec => sec,
+    min => min,
+    in_progress => in_progress);
 
 end Behavioral;

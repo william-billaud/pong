@@ -38,12 +38,13 @@ use IEEE.NUMERIC_STD.ALL;
 entity frame_c is
     Port ( hpos : in std_logic_vector(10 downto 0);
            vpos : in std_logic_vector(10 downto 0);
+           in_progress : in std_logic;
            new_frame : out STD_LOGIC);
 end frame_c;
 
 architecture Behavioral of frame_c is
 signal f : std_logic;
 begin
-new_frame <= '1' WHEN (hpos = 0 and vpos = 0) else '0';
+new_frame <= '1' WHEN (hpos = 0 and vpos = 0 and in_progress ='1') else '0';
 
 end Behavioral;

@@ -66,7 +66,7 @@ architecture Behavioral of move_ball is
     signal scoreJ2	: integer range 0 to 99:= 0;
 
 begin
-process (vga_clk, p1_up,p1_down,p2_down,p2_up) 
+process (vga_clk, p1_up,p1_down,p2_down,p2_up,new_frame) 
 begin
 
    if (rising_edge(vga_clk) and new_frame = '1') then

@@ -109,8 +109,8 @@ set_property PACKAGE_PIN W4 [get_ports {digit_choice[1]}]
 
 
 ##Buttons
-set_property PACKAGE_PIN U18 [get_ports reset]						
-	set_property IOSTANDARD LVCMOS33 [get_ports reset]
+#set_property PACKAGE_PIN U18 [get_ports reset]						
+#	set_property IOSTANDARD LVCMOS33 [get_ports reset]
 #set_property PACKAGE_PIN T18 [get_ports p1_down ]						
 #	set_property IOSTANDARD LVCMOS33 [get_ports p1_down]
 #set_property PACKAGE_PIN W19 [get_ports p1_up]						
