@@ -48,7 +48,7 @@ end digit_screen;
 architecture Behavioral of digit_screen is
 
 begin
-    process(hpos , vpos,number)
+    process(hpos , vpos,number,start_h,start_v)
        
         begin
           green <= "0000";

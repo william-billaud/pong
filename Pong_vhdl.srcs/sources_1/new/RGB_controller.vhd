@@ -144,7 +144,7 @@ balle : draw_balle port map(
             green => g_b,
             blue => b_b); 
             
-     process(hpos, vpos)
+     process(hpos, vpos,blank,r_b,paddle_h1,paddle_v1,paddle_v2,paddle_h2,b_b,g_b,g_d1,g_d2,g_d3,g_d4)
      begin
         r_out <="0000";
         g_out <= "0000";

@@ -48,7 +48,7 @@ end paddle_driver;
 architecture Behavioral of paddle_driver is
 signal mem_pos_paddle : integer range 0 to 800 := 220;
 begin
- process (vga_clk) 
+ process (vga_clk,reset,new_frame) 
 begin
    if (reset = '1') then
         mem_pos_paddle <= 220;

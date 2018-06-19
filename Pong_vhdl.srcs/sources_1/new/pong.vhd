@@ -7,7 +7,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity pong is
     Port ( clk : in STD_LOGIC;
-           reset : in STD_LOGIC;
            vgaBlue : out STD_LOGIC_VECTOR (3 downto 0);
            vgaRed : out STD_LOGIC_VECTOR (3 downto 0);
            vgaGreen : out STD_LOGIC_VECTOR (3 downto 0);
@@ -29,6 +28,9 @@ constant up_j2 : STD_LOGIC_VECTOR(7 downto 0) := X"1B";
 constant down_j1 : STD_LOGIC_VECTOR(7 downto 0) := X"44";
 --touche down joueur gauche : L 
 constant up_j1 : STD_LOGIC_VECTOR(7 downto 0) := X"4B";
+
+-- Bouton reset
+constant R_but : STD_LOGIC_VECTOR(7 downto 0) := X"2D";
 
 component score is
 port ( scoreJ1 : in integer range 0 to 99;
@@ -133,6 +135,9 @@ signal p1_up :  STD_LOGIC := '0';
 signal p1_down : STD_LOGIC :='0';
 signal p2_up :  STD_LOGIC := '0';
 signal p2_down : STD_LOGIC :='0';
+
+
+signal reset : STD_LOGIC :='0';
 begin
 
 clock : clock_vga port map(
@@ -195,6 +200,11 @@ b_up_2 : boutton port map ( ps2_code_new =>ps2_code_new,
                       ps2_code => ps2_code,
                       code_on => up_j2,
                       signal_button => p2_up);
+                      
+b_reset : boutton port map ( ps2_code_new =>ps2_code_new,
+            ps2_code => ps2_code,
+            code_on => R_but,
+            signal_button => reset);
            
 b_down_2 : boutton port map ( ps2_code_new =>ps2_code_new,
     ps2_code => ps2_code,
@@ -205,7 +215,7 @@ paddle_j1 : paddle_driver port map(vga_clk=>vga_clk,paddle_speed=>paddle_speed,n
 paddle_j2 : paddle_driver port map(vga_clk=>vga_clk,paddle_speed=>paddle_speed,new_frame=>new_frame,
     p_up=>p2_up,p_down=>p2_down,pos_paddle=>paddle_v2,reset=>reset);                      
 
-move_ball : process (vga_clk) 
+move_ball : process (vga_clk,new_frame) 
 begin
  
 	if (rising_edge(vga_clk) and new_frame = '1') then

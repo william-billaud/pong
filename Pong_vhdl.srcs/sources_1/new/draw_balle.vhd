@@ -46,7 +46,7 @@ architecture Behavioral of draw_balle is
 
 begin
 
-    process(hpos , vpos)      
+    process(hpos , vpos,start_h,start_v)      
         begin
         red <="0000";
         green <="0000";
