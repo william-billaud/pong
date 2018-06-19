@@ -72,6 +72,15 @@ component draw_balle is
            blue : out STD_LOGIC_VECTOR (3 downto 0));
 end component;
 
+component draw_dotline
+    Port ( hpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
+           vpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
+           start_h , start_v : in integer range 0 to 800:= 15;
+           red : out STD_LOGIC_VECTOR (3 downto 0) := "0000";
+           green : out STD_LOGIC_VECTOR (3 downto 0):= "0000";
+           blue : out STD_LOGIC_VECTOR (3 downto 0):= "0000");
+end component;
+
 component breakNumber is
     Port ( 
         nombre : in integer range 0 to 99;
@@ -84,6 +93,7 @@ signal  r_d2 , g_d2 , b_d2: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_d3 , g_d3 , b_d3: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_d4 , g_d4 , b_d4: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_b , g_b , b_b: STD_LOGIC_VECTOR (3 downto 0):="0000";
+signal  r_dotline , g_dotline , b_dotline: STD_LOGIC_VECTOR (3 downto 0):="0000";
 
 signal  r_out , g_out , b_out: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal uniteJ1 , dizaineJ1, uniteJ2, dizaineJ2 : integer range 0 to 9 := 0;
@@ -144,7 +154,16 @@ balle : draw_balle port map(
             green => g_b,
             blue => b_b); 
             
-     process(hpos, vpos,blank,r_b,paddle_h1,paddle_v1,paddle_v2,paddle_h2,b_b,g_b,g_d1,g_d2,g_d3,g_d4)
+dotline : draw_dotline port map (
+              hpos => hpos,
+              vpos => vpos,
+              start_h => 0,
+              start_v => 0,
+              red => r_dotline,
+              green => g_dotline,
+              blue => b_dotline);     
+            
+     process(hpos, vpos,blank,r_b,paddle_h1,paddle_v1,paddle_v2,paddle_h2,b_b,g_b,g_d1,g_d2,g_d3,g_d4, r_dotline, g_dotline, b_dotline)
      begin
         r_out <="0000";
         g_out <= "0000";
@@ -158,6 +177,8 @@ balle : draw_balle port map(
                 r_out <= "1111";
              elsif (hpos <3 or vpos >476 or hpos > 636 or vpos < 3) then
                 r_out <="1111";
+             elsif(r_dotline /= "0000") then
+                r_out <= r_dotline;
              end if;
                      
              if(b_b /="0000") then
@@ -166,6 +187,8 @@ balle : draw_balle port map(
                 b_out <= "1111";
              elsif(hpos <3 or vpos >476 or hpos > 636 or vpos < 3) then
                 b_out <="1111";
+             elsif(b_dotline /= "0000") then
+                b_out <= b_dotline;
              end if;
              
              if(g_b /="0000") then
@@ -182,6 +205,8 @@ balle : draw_balle port map(
                 g_out <= g_d4;
              elsif (hpos <3 or vpos >476 or hpos > 636 or vpos < 3) then
                 g_out <="1111";
+             elsif(g_dotline /= "0000") then
+                g_out <= g_dotline;
              end if;
          end if;
      end process;
