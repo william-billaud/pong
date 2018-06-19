@@ -92,7 +92,7 @@ component draw_dotline
            vpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
            red : out STD_LOGIC_VECTOR (3 downto 0) := "0000";
            green : out STD_LOGIC_VECTOR (3 downto 0):= "0000";
-           start_h , start_v : in integer range 0 to 800:= 15;
+           blank : in STD_LOGIC;
            blue : out STD_LOGIC_VECTOR (3 downto 0):= "0000");
 end component;
 signal  r_d1 , g_d1 , b_d1: STD_LOGIC_VECTOR (3 downto 0):="0000";
@@ -156,8 +156,7 @@ balle : draw_balle port map(
 dotline : draw_dotline port map (
               hpos => hpos,
               vpos => vpos,
-              start_h => 0,
-              start_v => 0,
+              blank => blank,
               red => r_dotline,
               green => g_dotline,
               blue => b_dotline);     
@@ -184,8 +183,8 @@ pad_2 : draw_paddle port map(
         bleu => b_pad_2
         );        
 
-    rouge <= r_b or r_pad_1 or r_pad_2;
-    bleu <= b_b or b_pad_2;
-    vert <= g_d1 or g_d2 or g_d3 or g_d4 or g_b or g_pad_1;         
+    rouge <= r_b or r_pad_1 or r_pad_2 or r_dotline;
+    bleu <= b_b or b_pad_2 or b_dotline;
+    vert <= g_d1 or g_d2 or g_d3 or g_d4 or g_b or g_pad_1 or g_dotline;         
 
 end Behavioral;

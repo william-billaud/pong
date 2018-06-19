@@ -37,27 +37,18 @@ use IEEE.NUMERIC_STD.ALL;
 entity draw_dotline is
     Port ( hpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
            vpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
-           start_h , start_v : in integer range 0 to 800:= 15;
+           blank : in STD_LOGIC ;
            red : out STD_LOGIC_VECTOR (3 downto 0) := "0000";
            green : out STD_LOGIC_VECTOR (3 downto 0):= "0000";
            blue : out STD_LOGIC_VECTOR (3 downto 0):= "0000");
 end draw_dotline;
 
 architecture Behavioral of draw_dotline is
-signal cpt : integer range 0 to 479:=0;
+signal color : STD_LOGIC_VECTOR (3 downto 0):= "0000";
 begin
 
-process(hpos , vpos,start_h,start_v)      
-   begin
-        if ( hpos = 319) then  
-                red <= "1111";
-                green <="1111";
-                blue <= "1111";
-             else    
-               red <= "0000";
-               green <="0000";
-               blue <= "0000";                        
-            end if;   
-end process;
-
+color <= "1111" WHEN blank ='0' and hpos = 319 and vpos(2)='1' else "0000";
+red <= color;
+green <= color;
+blue <= color;
 end Behavioral;
