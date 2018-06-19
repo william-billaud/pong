@@ -101,36 +101,36 @@ score2 : breakNumber port map(
 digit1 : digit_screen port map(
     hpos => hpos,
     vpos => vpos,
-    start_h => 15,
+    start_h => 300,
     start_v => 15,
-    number => dizaineJ1,
+    number => dizaineJ2,
     red => r_d1,
     green => g_d1,
     blue => b_d1);      
 digit2 : digit_screen port map(
         hpos => hpos,
         vpos => vpos,
-        start_h => 21,
+        start_h => 306,
         start_v => 15,
-        number => uniteJ1,
+        number => uniteJ2,
         red => r_d2,
         green => g_d2,
         blue => b_d2);  
 digit3 : digit_screen port map(
         hpos => hpos,
         vpos => vpos,
-        start_h => 33,
+        start_h => 335,
         start_v => 15,
-        number => dizaineJ2,
+        number => dizaineJ1,
         red => r_d3,
         green => g_d3,
         blue => b_d3);  
 digit4 : digit_screen port map(
         hpos => hpos,
         vpos => vpos,
-        start_h => 39,
+        start_h => 341,
         start_v => 15,
-        number => uniteJ2,
+        number => uniteJ1,
         red => r_d4,
         green => g_d4,
         blue => b_d4);      
