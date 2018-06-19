@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
+--   Enginner : https://github.com/ress
 --
 --   FileName:         ps2_keyboard.vhd
---   Dependencies:     debounce.vhd
 --   Design Software:  Quartus II 32-bit Version 12.1 Build 177 SJ Full Version
 --
 --   HDL CODE IS PROVIDED "AS IS."  DIGI-KEY EXPRESSLY DISCLAIMS ANY
