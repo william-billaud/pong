@@ -40,31 +40,24 @@ end boutton;
 
 architecture Behavioral of boutton is
 signal mem : std_logic := '0';
-signal unset : std_logic :='0';
+signal breakcode : std_logic := '0';
 begin
-process(ps2_code_new)
+process(ps2_code_new,ps2_code)
 begin
-if(ps2_code_new='1') then
-    if(code_on = ps2_code) then 
---        if(unset ='0') then
---            mem<='1';
---        else
---            mem <='0';
---            unset<='0';    
---        end if;    
---    elsif(x"F0"=ps2_code) then
---        unset<='1';
---    elsif(x"E0" =ps2_code) then
---        unset<='0';    
---    else 
---        unset <='Z';   
-    mem<='1';
-    else
-    mem<='0';
-    end if;    
-end if;
-
+if(ps2_code_new='1' and ps2_code_new'event) then
+    if(breakcode='0') then    
+        if(code_on=ps2_code) then
+            mem<='1';
+        elsif(ps2_code="11110000") then
+            breakcode<='1';    
+        end if; 
+     elsif(breakcode='1') then
+        breakcode<='0';
+        if(ps2_code=code_on) then
+            mem<='0';
+         end if;          
+    end if;        
+end if;    
 end process;
-
 signal_button <=mem;
 end Behavioral;

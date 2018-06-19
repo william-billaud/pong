@@ -8,8 +8,6 @@ use IEEE.NUMERIC_STD.ALL;
 entity pong is
     Port ( clk : in STD_LOGIC;
            reset : in STD_LOGIC;
-           p2_up : in STD_LOGIC;
-           p2_down : in STD_LOGIC;
            vgaBlue : out STD_LOGIC_VECTOR (3 downto 0);
            vgaRed : out STD_LOGIC_VECTOR (3 downto 0);
            vgaGreen : out STD_LOGIC_VECTOR (3 downto 0);
@@ -23,6 +21,10 @@ entity pong is
 end pong;
 
 architecture Behavioral of pong is
+constant up_j1 : STD_LOGIC_VECTOR(7 downto 0) := X"1D";
+constant down_j1 : STD_LOGIC_VECTOR(7 downto 0) := X"1B";
+constant up_j2 : STD_LOGIC_VECTOR(7 downto 0) := X"44";
+constant down_j2 : STD_LOGIC_VECTOR(7 downto 0) := X"4B";
 
 component score is
 port ( scoreJ1 : in integer range 0 to 99;
@@ -76,7 +78,6 @@ end component;
 
 component ps2_keyboard IS
     PORT(
-    clk          : IN  STD_LOGIC;                     --system clock
     ps2_clk      : IN  STD_LOGIC;                     --clock signal from PS/2 keyboard
     ps2_data     : IN  STD_LOGIC;                     --data signal from PS/2 keyboard
     ps2_code_new : OUT STD_LOGIC;                     --flag that new PS/2 code is available on ps2_code bus
@@ -118,6 +119,8 @@ signal ps2_code : STD_LOGIC_VECTOR(7 DOWNTO 0);
 signal ps2_code_new : std_logic;
 signal p1_up :  STD_LOGIC := '0';
 signal p1_down : STD_LOGIC :='0';
+signal p2_up :  STD_LOGIC := '0';
+signal p2_down : STD_LOGIC :='0';
 begin
 
 clock : clock_vga port map(
@@ -161,7 +164,6 @@ scoreDigit : score port map(
     CLK =>clk);
     
 ps2 : ps2_keyboard port map(
-        clk=> clk,     
         ps2_clk=> PS2Clk,
         ps2_data => PS2Data,
         ps2_code_new =>ps2_code_new,
@@ -169,13 +171,23 @@ ps2 : ps2_keyboard port map(
 
 b_up_1 : boutton port map ( ps2_code_new =>ps2_code_new,
            ps2_code => ps2_code,
-           code_on => x"15",
+           code_on => up_j1,
            signal_button => p1_up);
 
 b_down_1 : boutton port map ( ps2_code_new =>ps2_code_new,
            ps2_code => ps2_code,
-           code_on => x"23",
+           code_on => down_j1,
            signal_button => p1_down) ;
+           
+b_up_2 : boutton port map ( ps2_code_new =>ps2_code_new,
+                      ps2_code => ps2_code,
+                      code_on => up_j2,
+                      signal_button => p2_up);
+           
+b_down_2 : boutton port map ( ps2_code_new =>ps2_code_new,
+                      ps2_code => ps2_code,
+                      code_on => down_j2,
+                      signal_button => p2_down) ;           
     
 move_paddle : process (vga_clk) 
 begin
