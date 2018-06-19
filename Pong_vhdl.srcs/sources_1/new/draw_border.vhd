@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 19.06.2018 15:23:57
+-- Create Date: 19.06.2018 22:05:34
 -- Design Name: 
--- Module Name: draw_dotline - Behavioral
+-- Module Name: draw_border - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -34,21 +34,21 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity draw_dotline is
+entity draw_border is
     Port ( hpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
-           vpos : in STD_LOGIC;
-           blank : in STD_LOGIC ;
-           red : out STD_LOGIC_VECTOR (3 downto 0) := "0000";
-           green : out STD_LOGIC_VECTOR (3 downto 0):= "0000";
-           blue : out STD_LOGIC_VECTOR (3 downto 0):= "0000");
-end draw_dotline;
+    vpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
+    blank : in STD_LOGIC ;
+    red : out STD_LOGIC_VECTOR (3 downto 0) := "0000";
+    green : out STD_LOGIC_VECTOR (3 downto 0):= "0000";
+    blue : out STD_LOGIC_VECTOR (3 downto 0):= "0000");
+end draw_border;
 
-architecture Behavioral of draw_dotline is
-signal color : STD_LOGIC_VECTOR (3 downto 0):= "0000";
+architecture Behavioral of draw_border is
+    signal color : STD_LOGIC_VECTOR (3 downto 0):= "0000";
 begin
+    color <= "1111" WHEN blank ='0' and (hpos <3 or vpos >476 or hpos > 636 or vpos < 3) else "0000";
+    red <= color;
+    green <= color;
+    blue <= color;
 
-color <= "1111" WHEN blank ='0' and hpos = 319 and vpos='1' else "0000";
-red <= color;
-green <= color;
-blue <= color;
 end Behavioral;
