@@ -21,14 +21,14 @@ entity pong is
 end pong;
 
 architecture Behavioral of pong is
---touche up joueur 1 : Z 
-constant down_j1 : STD_LOGIC_VECTOR(7 downto 0) := X"1D";
---touche down joueur 1 : S 
-constant up_j1 : STD_LOGIC_VECTOR(7 downto 0) := X"1B";
---touche up joueur  : O
-constant down_j2 : STD_LOGIC_VECTOR(7 downto 0) := X"44";
---touche down joueur 2 : L 
-constant up_j2 : STD_LOGIC_VECTOR(7 downto 0) := X"4B";
+--touche up joueur droite : Z 
+constant down_j2 : STD_LOGIC_VECTOR(7 downto 0) := X"1D";
+--touche down joueur droitre : S 
+constant up_j2 : STD_LOGIC_VECTOR(7 downto 0) := X"1B";
+--touche up joueur  Gauche: O
+constant down_j1 : STD_LOGIC_VECTOR(7 downto 0) := X"44";
+--touche down joueur gauche : L 
+constant up_j1 : STD_LOGIC_VECTOR(7 downto 0) := X"4B";
 
 component score is
 port ( scoreJ1 : in integer range 0 to 99;
@@ -93,10 +93,18 @@ component boutton is
            ps2_code : in STD_LOGIC_VECTOR (7 downto 0);
            code_on : in STD_LOGIC_VECTOR (7 downto 0);
            signal_button : out STD_LOGIC);
-end component;           
-           
-           
+end component;   
 
+component paddle_driver is
+    Port ( vga_clk : in STD_LOGIC;
+            paddle_speed : in integer range 0 to 15:= 4;
+            new_frame : in std_logic;
+            p_up : in STD_LOGIC;
+            p_down : in STD_LOGIC;
+            pos_paddle : out integer range 0 to 800;
+            reset : in STD_LOGIC);
+end component;        
+           
 signal vga_clk : std_logic:='0'; 
 signal rst : std_logic:='0'; 
 signal hpos : std_logic_vector(10 downto 0):= (others => '0');
@@ -189,41 +197,13 @@ b_up_2 : boutton port map ( ps2_code_new =>ps2_code_new,
                       signal_button => p2_up);
            
 b_down_2 : boutton port map ( ps2_code_new =>ps2_code_new,
-                      ps2_code => ps2_code,
-                      code_on => down_j2,
-                      signal_button => p2_down) ;           
-    
-move_paddle : process (vga_clk) 
-begin
-    if (reset = '1') then
-        paddle_v2 <= 220;
-        paddle_v1 <= 220;
-    end if;
-	if (rising_edge(vga_clk) and new_frame = '1') then
-		
-		if (p1_up = '1') then  
-			if (paddle_v2 < 440) then
-				paddle_v2 <= paddle_v2 + paddle_speed;
-			end if;
-		elsif ( p1_down = '1') then  
-			if (paddle_v2 > 3) then
-				paddle_v2 <= paddle_v2 - paddle_speed;
-			end if;
-		end if;
-		
-		if (p2_up = '1') then
-			if (paddle_v1 < 440) then
-				paddle_v1 <= paddle_v1 + paddle_speed;
-			end if;
-		elsif (p2_down = '1') then
-			if (paddle_v1 > 3) then
-				paddle_v1 <= paddle_v1 - paddle_speed;
-			end if;
-		end if;
-			
-	end if;
-		 
-end process;
+    ps2_code => ps2_code,
+    code_on => down_j2,
+    signal_button => p2_down) ;           
+paddle_j1 : paddle_driver port map(vga_clk=>vga_clk,paddle_speed=>paddle_speed,new_frame=>new_frame,
+    p_up=>p1_up,p_down=>p1_down,pos_paddle=>paddle_v1,reset=>reset);
+paddle_j2 : paddle_driver port map(vga_clk=>vga_clk,paddle_speed=>paddle_speed,new_frame=>new_frame,
+    p_up=>p2_up,p_down=>p2_down,pos_paddle=>paddle_v2,reset=>reset);                      
 
 move_ball : process (vga_clk) 
 begin
