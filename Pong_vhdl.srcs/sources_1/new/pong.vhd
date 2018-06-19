@@ -21,10 +21,14 @@ entity pong is
 end pong;
 
 architecture Behavioral of pong is
-constant up_j1 : STD_LOGIC_VECTOR(7 downto 0) := X"1D";
-constant down_j1 : STD_LOGIC_VECTOR(7 downto 0) := X"1B";
-constant up_j2 : STD_LOGIC_VECTOR(7 downto 0) := X"44";
-constant down_j2 : STD_LOGIC_VECTOR(7 downto 0) := X"4B";
+--touche up joueur 1 : Z 
+constant down_j1 : STD_LOGIC_VECTOR(7 downto 0) := X"1D";
+--touche down joueur 1 : S 
+constant up_j1 : STD_LOGIC_VECTOR(7 downto 0) := X"1B";
+--touche up joueur  : O
+constant down_j2 : STD_LOGIC_VECTOR(7 downto 0) := X"44";
+--touche down joueur 2 : L 
+constant up_j2 : STD_LOGIC_VECTOR(7 downto 0) := X"4B";
 
 component score is
 port ( scoreJ1 : in integer range 0 to 99;
