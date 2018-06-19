@@ -106,7 +106,29 @@ component paddle_driver is
             pos_paddle : out integer range 0 to 800;
             reset : in STD_LOGIC);
 end component;        
-           
+
+
+component move_ball is
+    Port (
+      vga_clk : in STD_LOGIC;
+      new_frame : in STD_LOGIC;
+      reset : in STD_LOGIC;
+      paddle_h1 : in integer range 0 to 800;
+      paddle_v1 : in integer range 0 to 800;
+      paddle_h2 : in integer range 0 to 800;
+      paddle_v2 : in integer range 0 to 800;
+      p1_up : in STD_LOGIC := '0';
+      p1_down : in STD_LOGIC :='0';
+      p2_up : in  STD_LOGIC := '0';
+      p2_down : in STD_LOGIC :='0';
+      hBalle : out integer range 0 to 800;
+      vBalle : out integer range 0 to 800;
+      scoreJ1_out    : out integer range 0 to 99;
+      scoreJ2_out : out integer range 0 to 99
+     );
+end component;
+
+
 signal vga_clk : std_logic:='0'; 
 signal rst : std_logic:='0'; 
 signal hpos : std_logic_vector(10 downto 0):= (others => '0');
@@ -122,10 +144,7 @@ signal paddle_speed	: integer range 0 to 15:= 4;
 
 signal ball_pos_h1 : integer range 0 to 800:= 318;
 signal ball_pos_v1 : integer range 0 to 800:= 238;
-signal ball_up : std_logic:= '0';
-signal ball_right : std_logic:= '1';
-signal ball_speed_h	: integer range 0 to 5:= 2;
-signal ball_speed_v	: integer range 0 to 5:= 2;
+
 
 signal scoreJ1	: integer range 0 to 99:= 0;
 signal scoreJ2	: integer range 0 to 99:= 0;
@@ -215,71 +234,22 @@ paddle_j1 : paddle_driver port map(vga_clk=>vga_clk,paddle_speed=>paddle_speed,n
 paddle_j2 : paddle_driver port map(vga_clk=>vga_clk,paddle_speed=>paddle_speed,new_frame=>new_frame,
     p_up=>p2_up,p_down=>p2_down,pos_paddle=>paddle_v2,reset=>reset);                      
 
-move_ball : process (vga_clk,new_frame) 
-begin
- 
-	if (rising_edge(vga_clk) and new_frame = '1') then
-	   if (reset = '1') then
-    	   ball_pos_v1 <= 218;
-		   ball_pos_h1 <= 318;
-		  --- ball_speed_v <=2;
-		   scoreJ1 <= 0;
-		   scoreJ2<=0;
-    	else
-			if (ball_pos_v1 < 469 and ball_up = '1') then
-				ball_pos_v1 <= ball_pos_v1 + ball_speed_v;
-			elsif (ball_up = '1') then
-				ball_up <= '0';
-			elsif (ball_pos_v1 > 3 and ball_up = '0') then
-				ball_pos_v1 <= ball_pos_v1 - ball_speed_v;
-			elsif (ball_up = '0') then
-				ball_up <= '1';
-			end if;
-			
-			if (ball_pos_h1 < 628 and ball_right = '1') then
-				ball_pos_h1 <= ball_pos_h1 + ball_speed_h;
-			elsif (ball_right = '1') then
-			    scoreJ2 <= scoreJ2 + 1; 
-				ball_right	<= '0';
-				ball_pos_v1 <= 238;
-                ball_pos_h1 <= 318;    			
-			elsif (ball_pos_h1 > 4 and ball_right = '0') then
-				ball_pos_h1 <= ball_pos_h1 - ball_speed_h;
-			elsif (ball_right = '0') then
-			    scoreJ1 <= scoreJ1+1; 
-				ball_right <= '1';
-				ball_pos_v1 <= 238;
-                ball_pos_h1 <= 318;			
-			end if;
-		end if;
-	end if;
-	if (rising_edge(vga_clk) and new_frame = '1') then
-        if(ball_pos_h1 <= (paddle_h1 + 5) and (ball_pos_h1+3) > paddle_h1 and ball_pos_v1 >= paddle_v1 and ball_pos_v1 < (paddle_v1+40) )  then
-            ball_right <= '0'; 
-            if((p1_up = '1' and ball_up = '1') or (p1_down ='0' and ball_up ='0' )) then                
-                if(ball_speed_v > 1)then
-                    ball_speed_v <= ball_speed_v -1;
-                end if;
-            elsif((p1_up = '1' and ball_up = '0') or (p1_down ='0' and ball_up ='1'))then
-                if(ball_speed_v <4) then
-                    ball_speed_v <= ball_speed_v + 1;
-                end if;
-            end if;
-        end if;
-        if((ball_pos_h1 +3) >= paddle_h2 and ball_pos_h1 < (paddle_h2+5) and ball_pos_v1 >= (paddle_v2) and ball_pos_v1 < (paddle_v2+40)) then
-            ball_right <= '1';
-             if((p2_up = '1' and ball_up = '1') or (p2_down ='0' and ball_up ='0' )) then
-                  if(ball_speed_v > 1)then
-                      ball_speed_v <= ball_speed_v -1;
-                   end if;
-             elsif((p2_up = '1' and ball_up = '0') or (p2_down ='0' and ball_up ='1'))then
-                 if(ball_speed_v < 4) then 
-                     ball_speed_v <= ball_speed_v + 1;
-                  end if;
-             end if;
-        end if;			
-	end if;
-		 
-end process;
+
+deplacement_balle : move_ball port map(
+    vga_clk=>vga_clk,
+    new_frame=>new_frame,
+    reset=>reset,
+    paddle_h1=>paddle_h1,
+    paddle_v1=>paddle_v1,
+    paddle_h2=>paddle_h2,
+    paddle_v2=>paddle_v2,
+    p1_up=>p1_up,
+    p1_down=>p1_down,
+    p2_up=>p2_up,
+    p2_down=>p2_down,
+    hBalle=>ball_pos_h1,
+    vBalle=>ball_pos_v1,
+    scoreJ1_out=> scoreJ1,
+    scoreJ2_out=> scoreJ2);
 
 end Behavioral;
