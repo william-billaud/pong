@@ -44,7 +44,7 @@ end clk_min;
 architecture Behavioral of clk_min is
 
 signal compteur_m : STD_LOGIC_VECTOR (31 downto 0) := X"00000000";
-signal clk_min_int : STD_LOGIC := '0';
+signal clk_min_int : STD_LOGIC := '1';
 
 begin
 
@@ -54,16 +54,12 @@ begin
 
 if(reset ='1') then 
     compteur_m <= X"00000000";
-    clk_min_int<='0';  
+    clk_min_int<='1';  
 elsif(clk'event and clk = '1') then
     compteur_m <= compteur_m + 1;
-    if(compteur_m =  X"B2D05E00") then
-        if(clk_min_int = '1') then
-            clk_min_int <= '0';
-        else
-            clk_min_int <= '1';
-        end if;
-        compteur_m <= X"00000000";
+    if(compteur_m =  X"B2D05DFF") then
+            clk_min_int <= not clk_min_int;
+            compteur_m <= X"00000000";
     end if;
 end if;
 clk_m <= clk_min_int;

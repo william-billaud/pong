@@ -47,8 +47,8 @@ architecture Behavioral of chrono is
 
 signal compteur_s : STD_LOGIC_VECTOR (31 downto 0) := X"00000000";
 signal compteur_m : STD_LOGIC_VECTOR (31 downto 0) := X"00000000";
-signal sec_int : integer range 0 to 59 := 0;
-signal min_int : integer range 0 to 9 := 3;
+signal sec_int : integer range 0 to 59 := 59;
+signal min_int : integer range 0 to 9 := 2;
 signal in_progress_int : STD_LOGIC := '1';
 signal clk_s_int, clk_min_int : STD_LOGIC;
 signal clk_p : std_logic;
@@ -74,7 +74,7 @@ compteur_min : clk_min port map ( clk => clk_p,reset => reset, clk_m => clk_min_
 process(clk_s_int,reset)
     begin
     if(reset='1') then
-        sec_int <=0;
+        sec_int <=59;
     elsif(clk_s_int'event and clk_s_int = '1') then
 
         if(sec_int=0) then
@@ -85,18 +85,20 @@ process(clk_s_int,reset)
     end if;
 end process;
 
-process(clk_min_int)
+process(clk_min_int,reset)
     begin
     if(reset='1') then
-            min_int <=0;
+            min_int <=2;
      elsif(clk_min_int'event and clk_min_int = '1') then
         min_int <= min_int - 1;
     end if;
 end process;
 
-process(min_int,sec_int)
+process(min_int,sec_int,reset)
 begin
-    if(min_int = 0 and sec_int =0) then
+    if(reset='1') then
+        in_progress_int <= '1';
+     elsif(min_int = 0 and sec_int =0) then
         in_progress_int <='0';
      else
         in_progress_int <='1';   

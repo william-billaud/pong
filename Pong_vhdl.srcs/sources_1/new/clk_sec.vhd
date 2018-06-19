@@ -43,22 +43,18 @@ end clk_sec;
 
 architecture Behavioral of clk_sec is
 
-signal clk_s_int : STD_LOGIC := '0';
+signal clk_s_int : STD_LOGIC := '1';
 signal compteur_s : STD_LOGIC_VECTOR (31 downto 0) := X"00000000";
 begin
 process(clk,reset,clk_s_int)
 begin
 if(reset ='1') then 
     compteur_s <= X"00000000";
-    clk_s_int<='0';  
+    clk_s_int<='1';  
 elsif(clk'event and clk = '1') then
     compteur_s <= compteur_s +1;
-    if(compteur_s =  X"02FAF080") then
-        if(clk_s_int = '1') then
-            clk_s_int <= '0';
-        else
-            clk_s_int <= '1';
-        end if;
+    if(compteur_s =  X"02FAF07F") then
+        clk_s_int <= not clk_s_int;
         compteur_s <= X"00000000";
     end if;
 end if;
