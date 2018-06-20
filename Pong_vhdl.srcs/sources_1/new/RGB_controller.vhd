@@ -114,10 +114,19 @@ component draw_winner is
          blue : out STD_LOGIC_VECTOR (3 downto 0):= "0000");
 end component;
 
+component dot
+Port (hpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
+           vpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
+           red : out STD_LOGIC_VECTOR (3 downto 0) := "0000";
+           green : out STD_LOGIC_VECTOR (3 downto 0):= "0000";
+           blue : out STD_LOGIC_VECTOR (3 downto 0):= "0000");
+end component;
+
 signal  r_d1 , g_d1 , b_d1: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_d2 , g_d2 , b_d2: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_d3 , g_d3 , b_d3: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_d4 , g_d4 , b_d4: STD_LOGIC_VECTOR (3 downto 0):="0000";
+signal  r_dot , g_dot , b_dot: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_b , g_b , b_b: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_dotline , g_dotline , b_dotline: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_border , g_border , b_border: STD_LOGIC_VECTOR (3 downto 0):="0000";
@@ -228,7 +237,15 @@ pad_2 : draw_paddle port map(
         rouge => r_pad_2,
         vert => g_pad_2,
         bleu => b_pad_2
-        );        
+        );
+        
+dot_time : dot  port map(
+            hpos => hpos,
+            vpos => vpos,
+            red => r_dot,
+            green => g_dot,
+            blue => b_dot
+        );
 
 
 score(0)<= '1' when scoreJ1>scoreJ2 else '0';
@@ -243,7 +260,7 @@ With score SELECT g_w <= g_w_1 when "10",
                   g_w_2 when "01",
                   (g_w_2 or g_w_1) when others;                               
     rouge <= r_b or r_pad_1 or r_pad_2 or r_dotline or r_border or r_w;
-    bleu <= b_b or b_pad_2 or b_dotline or b_border or b_w ;
-    vert <= g_d1 or g_d2 or g_d3 or g_d4 or g_b or g_pad_1 or g_border or g_dotline or g_w;         
+    bleu <= b_b or b_pad_2 or b_dotline or b_border or b_w;
+    vert <= g_d1 or g_d2 or g_d3 or g_d4 or g_b or g_pad_1 or g_border or g_dotline or g_w or g_dot;         
 
 end Behavioral;
