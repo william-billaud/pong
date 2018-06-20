@@ -121,7 +121,8 @@ signal  r_d4 , g_d4 , b_d4: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_b , g_b , b_b: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_dotline , g_dotline , b_dotline: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_border , g_border , b_border: STD_LOGIC_VECTOR (3 downto 0):="0000";
-signal  r_w , g_w , b_w: STD_LOGIC_VECTOR (3 downto 0):="0000";
+signal  r_w_1 , g_w_1 , b_w_1: STD_LOGIC_VECTOR (3 downto 0):="0000";
+signal  r_w_2 , g_w_2 , b_w_2: STD_LOGIC_VECTOR (3 downto 0):="0000";
 
 signal  r_pad_1 , g_pad_1 , b_pad_1: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_pad_2 , g_pad_2 , b_pad_2: STD_LOGIC_VECTOR (3 downto 0):="0000";
@@ -174,15 +175,23 @@ balle : draw_balle port map(
             red => r_b,
             green => g_b,
             blue => b_b); 
-coupe : draw_winner port map(
+coupeJ1 : draw_winner port map(
         hpos => vpos,
         vpos => hpos,
         start_h => 15,
         start_v => 15,
-        red => r_w,
-        green => g_w,
-        blue => b_w);
-         
+        red => r_w_1,
+        green => g_w_1,
+        blue => b_w_1);
+
+coupeJ2 : draw_winner port map(
+        hpos => vpos,
+        vpos => hpos,
+        start_h => 15,
+        start_v => 600,
+        red => r_w_2,
+        green => g_w_2,
+        blue => b_w_2);         
 dotline : draw_dotline port map (
               hpos => hpos,
               vpos => vpos(2),
@@ -219,8 +228,8 @@ pad_2 : draw_paddle port map(
         bleu => b_pad_2
         );        
 
-    rouge <= r_b or r_pad_1 or r_pad_2 or r_dotline or r_border or r_w;
-    bleu <= b_b or b_pad_2 or b_dotline or b_border or b_w ;
-    vert <= g_d1 or g_d2 or g_d3 or g_d4 or g_b or g_pad_1 or g_border or g_dotline or g_w;         
+    rouge <= r_b or r_pad_1 or r_pad_2 or r_dotline or r_border or r_w_1 or r_w_2;
+    bleu <= b_b or b_pad_2 or b_dotline or b_border or b_w_1 or b_w_2 ;
+    vert <= g_d1 or g_d2 or g_d3 or g_d4 or g_b or g_pad_1 or g_border or g_dotline or g_w_1 or g_w_2;         
 
 end Behavioral;
