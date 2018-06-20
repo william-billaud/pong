@@ -179,8 +179,8 @@ balle : draw_balle port map(
 coupeJ1 : draw_winner port map(
         hpos => vpos,
         vpos => hpos,
-        start_h => 15,
-        start_v => 15,
+        start_h => 7,
+        start_v => 280,
         red => r_w_1,
         green => g_w_1,
         blue => b_w_1);
@@ -188,11 +188,12 @@ coupeJ1 : draw_winner port map(
 coupeJ2 : draw_winner port map(
         hpos => vpos,
         vpos => hpos,
-        start_h => 15,
-        start_v => 600,
+        start_h => 7,
+        start_v => 343,
         red => r_w_2,
         green => g_w_2,
-        blue => b_w_2);         
+        blue => b_w_2);      
+           
 dotline : draw_dotline port map (
               hpos => hpos,
               vpos => vpos,
