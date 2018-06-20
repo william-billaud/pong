@@ -56,11 +56,11 @@ begin
    if (rising_edge(vga_clk) and new_frame = '1') then
        
        if (p_up = '1') then  
-           if (mem_pos_paddle < 440) then
+           if (mem_pos_paddle < 435) then
                 mem_pos_paddle <= mem_pos_paddle + paddle_speed;
            end if;
        elsif ( p_down = '1') then  
-           if (mem_pos_paddle > 3) then
+           if (mem_pos_paddle > 5) then
             mem_pos_paddle <= mem_pos_paddle - paddle_speed;
            end if;
        end if;           
