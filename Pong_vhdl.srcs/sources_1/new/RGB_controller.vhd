@@ -104,6 +104,16 @@ component draw_border
            blank : in STD_LOGIC;
            blue : out STD_LOGIC_VECTOR (3 downto 0):= "0000");
 end component;
+
+component draw_winner is
+  Port (hpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
+         vpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
+         start_h , start_v : in integer range 0 to 800:= 15;
+         red : out STD_LOGIC_VECTOR (3 downto 0) := "0000";
+         green : out STD_LOGIC_VECTOR (3 downto 0):= "0000";
+         blue : out STD_LOGIC_VECTOR (3 downto 0):= "0000");
+end component;
+
 signal  r_d1 , g_d1 , b_d1: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_d2 , g_d2 , b_d2: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_d3 , g_d3 , b_d3: STD_LOGIC_VECTOR (3 downto 0):="0000";
@@ -111,6 +121,7 @@ signal  r_d4 , g_d4 , b_d4: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_b , g_b , b_b: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_dotline , g_dotline , b_dotline: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_border , g_border , b_border: STD_LOGIC_VECTOR (3 downto 0):="0000";
+signal  r_w , g_w , b_w: STD_LOGIC_VECTOR (3 downto 0):="0000";
 
 signal  r_pad_1 , g_pad_1 , b_pad_1: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_pad_2 , g_pad_2 , b_pad_2: STD_LOGIC_VECTOR (3 downto 0):="0000";
@@ -163,6 +174,15 @@ balle : draw_balle port map(
             red => r_b,
             green => g_b,
             blue => b_b); 
+coupe : draw_winner port map(
+        hpos => vpos,
+        vpos => hpos,
+        start_h => 15,
+        start_v => 15,
+        red => r_w,
+        green => g_w,
+        blue => b_w);
+         
 dotline : draw_dotline port map (
               hpos => hpos,
               vpos => vpos(2),
@@ -199,8 +219,8 @@ pad_2 : draw_paddle port map(
         bleu => b_pad_2
         );        
 
-    rouge <= r_b or r_pad_1 or r_pad_2 or r_dotline or r_border;
-    bleu <= b_b or b_pad_2 or b_dotline or b_border;
-    vert <= g_d1 or g_d2 or g_d3 or g_d4 or g_b or g_pad_1 or g_border or g_dotline;         
+    rouge <= r_b or r_pad_1 or r_pad_2 or r_dotline or r_border or r_w;
+    bleu <= b_b or b_pad_2 or b_dotline or b_border or b_w ;
+    vert <= g_d1 or g_d2 or g_d3 or g_d4 or g_b or g_pad_1 or g_border or g_dotline or g_w;         
 
 end Behavioral;
