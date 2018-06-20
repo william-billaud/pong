@@ -235,11 +235,11 @@ score(1)<= '1' when scoreJ2>scoreJ1 else '0';
 With score SELECT r_w <= r_w_1 when "10",
                          r_w_2 when "01",
                         (r_w_2 or r_w_1) when others;         
-With score SELECT b_w <= b_w_1 when "01",
-                         b_w_2 when "10",
+With score SELECT b_w <= b_w_1 when "10",
+                         b_w_2 when "01",
                          (b_w_2 or b_w_1) when others;                          
-With score SELECT g_w <= g_w_1 when "01",
-                  g_w_2 when "10",
+With score SELECT g_w <= g_w_1 when "10",
+                  g_w_2 when "01",
                   (g_w_2 or g_w_1) when others;                               
     rouge <= r_b or r_pad_1 or r_pad_2 or r_dotline or r_border or r_w;
     bleu <= b_b or b_pad_2 or b_dotline or b_border or b_w ;
