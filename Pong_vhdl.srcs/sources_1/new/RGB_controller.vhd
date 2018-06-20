@@ -89,7 +89,7 @@ end component;
 
 component draw_dotline
     Port ( hpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
-           vpos : in STD_LOGIC;
+           vpos : in STD_LOGIC_VECTOR (10 downto 0):= (others => '0');
            red : out STD_LOGIC_VECTOR (3 downto 0) := "0000";
            green : out STD_LOGIC_VECTOR (3 downto 0):= "0000";
            blank : in STD_LOGIC;
@@ -123,9 +123,10 @@ signal  r_dotline , g_dotline , b_dotline: STD_LOGIC_VECTOR (3 downto 0):="0000"
 signal  r_border , g_border , b_border: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_w_1 , g_w_1 , b_w_1: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_w_2 , g_w_2 , b_w_2: STD_LOGIC_VECTOR (3 downto 0):="0000";
-
+signal  r_w , g_w , b_w: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_pad_1 , g_pad_1 , b_pad_1: STD_LOGIC_VECTOR (3 downto 0):="0000";
 signal  r_pad_2 , g_pad_2 , b_pad_2: STD_LOGIC_VECTOR (3 downto 0):="0000";
+signal score : std_logic_vector (1 downto 0);
 begin
     
 scoreJoueur2 : number_screen port map(
@@ -194,7 +195,7 @@ coupeJ2 : draw_winner port map(
         blue => b_w_2);         
 dotline : draw_dotline port map (
               hpos => hpos,
-              vpos => vpos(2),
+              vpos => vpos,
               blank => blank,
               red => r_dotline,
               green => g_dotline,
@@ -228,8 +229,20 @@ pad_2 : draw_paddle port map(
         bleu => b_pad_2
         );        
 
-    rouge <= r_b or r_pad_1 or r_pad_2 or r_dotline or r_border or r_w_1 or r_w_2;
-    bleu <= b_b or b_pad_2 or b_dotline or b_border or b_w_1 or b_w_2 ;
-    vert <= g_d1 or g_d2 or g_d3 or g_d4 or g_b or g_pad_1 or g_border or g_dotline or g_w_1 or g_w_2;         
+
+score(0)<= '1' when scoreJ1>scoreJ2 else '0';
+score(1)<= '1' when scoreJ2>scoreJ1 else '0';
+With score SELECT r_w <= r_w_1 when "10",
+                         r_w_2 when "01",
+                        (r_w_2 or r_w_1) when others;         
+With score SELECT b_w <= b_w_1 when "01",
+                         b_w_2 when "10",
+                         (b_w_2 or b_w_1) when others;                          
+With score SELECT g_w <= g_w_1 when "01",
+                  g_w_2 when "10",
+                  (g_w_2 or g_w_1) when others;                               
+    rouge <= r_b or r_pad_1 or r_pad_2 or r_dotline or r_border or r_w;
+    bleu <= b_b or b_pad_2 or b_dotline or b_border or b_w ;
+    vert <= g_d1 or g_d2 or g_d3 or g_d4 or g_b or g_pad_1 or g_border or g_dotline or g_w;         
 
 end Behavioral;
